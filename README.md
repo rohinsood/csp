@@ -8,5 +8,4 @@ https://rohinsood.github.io/csp/
 
 # Rohin's Fastpages
 
-
 _powered by [fastpages](https://github.com/fastai/fastpages)_
