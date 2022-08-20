@@ -1,22 +1,13 @@
 {
   
     
-        "post0": {
-            "title": "Title",
-            "content": ". title: &quot;Hello, World! (Python)&quot; description: &quot;Printing &quot;Hello, World! &quot; with Python&quot; layout: post toc: true comments: true image: images/python-logo.png hide: false search_exclude: true . categories: [python] . print(&quot;Hello, World!&quot;) . Run . cmd python filename.py . or . cmd py filename.py . Hello, World! .",
-            "url": "https://rohinsood.github.io/csp/2022/08/19/hello.html",
-            "relUrl": "/2022/08/19/hello.html",
-            "date": " • Aug 19, 2022"
-        }
-        
-    
   
 
   
   
 
   
-      ,"page1": {
+      "page1": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://rohinsood.github.io/csp/about/",
