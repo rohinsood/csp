@@ -3,7 +3,9 @@
     
   
     
-        "post1": {
+  
+    
+        "post2": {
             "title": "Post Made with Markdown",
             "content": "Markdown is a markup language used for formatting plain text documents! . Here are a few things that you can do with markdown: . You can style text using markdown! . And have HTML Fragments! . Click me 😁 This is a table made in HTML! 🤣 . 😁 | 🥺 | . And code embeds! . public class Calculator { public static void main(String[] args) { java.util.Scanner sc = new java.util.Scanner(System.in); double first_num = sc.nextDouble(); double second_num = sc.nextDouble(); System.out.println(first_num + second_num); } } . And images! . . This is an image of the nasa logo . And numbered lists! . My top 3 favorite emojis . 😁 | 😈 | 🥶 | Thanks for reading 😁 .",
             "url": "https://rohinsood.github.io/csp/markdown/2022/08/18/markdown.html",
