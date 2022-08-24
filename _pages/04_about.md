@@ -6,6 +6,6 @@ permalink: /about/
 
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
 
+# Hey, I'm Rohin 👋
 
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+I'm a sophmore at Del Norte High School and am interested in Full-Stack Web Developement, Robotics, and cyber security. 
