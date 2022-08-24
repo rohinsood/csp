@@ -33,7 +33,7 @@
   
       ,"page2": {
           "title": "Vocab",
-          "content": "Vocabulary for AP CSP . Term Definition . GitHub | 🧑‍💻 Code hosting service on the web | . Markdown | 🖋️ Markup language for formatting plain text | . Python | 🐍 High-level object-oriented scripting language | . Fastpages | ⏩ Easy to use blogging platform with Jupyter Notebook implenetation | . Repository | 📂 Where code on GitHub is stored | . Push/Pull | 🪢 Sending and recieving code from Github | .",
+          "content": "| Term | Definition | | — | — | | GitHub | 🧑‍💻 Code hosting service on the web | | Markdown | 🖋️ Markup language for formatting plain text | | Python | 🐍 High-level object-oriented scripting language | | Fastpages | ⏩ Easy to use blogging platform with Jupyter Notebook implenetation | | Repository | 📂 Where code on GitHub is stored | | Push/Pull | 🪢 Sending and recieving code to and from Github | . 🧠 Terms and Definitions for APCSP .",
           "url": "https://rohinsood.github.io/csp/vocab/",
           "relUrl": "/vocab/",
           "date": ""
