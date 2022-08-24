@@ -21,8 +21,32 @@
 
   
       ,"page1": {
+          "title": "Notes",
+          "content": "My Notes for AP Biology .",
+          "url": "https://rohinsood.github.io/csp/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "Vocab",
+          "content": "Vocabulary for AP CSP . Term Definition . GitHub | 🧑‍💻 Code hosting service on the web | . Markdown | 🖋️ Markup language for formatting plain text | . Python | 🐍 High-level object-oriented scripting language | . Fastpages | ⏩ Easy to use blogging platform with Jupyter Notebook implenetation | . Repository | 📂 Where code on GitHub is stored | . Push/Pull | 🪢 Sending and recieving code from Github | .",
+          "url": "https://rohinsood.github.io/csp/vocab/",
+          "relUrl": "/vocab/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+      ,"page4": {
           "title": "About Me",
-          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "This website is powered by fastpages [^1]. . Hey, I’m Rohin 👋 . I’m a sophmore at Del Norte High School and am interested in Full-Stack Web Developement, Robotics, and cyber security. .",
           "url": "https://rohinsood.github.io/csp/about/",
           "relUrl": "/about/",
           "date": ""
@@ -33,13 +57,8 @@
   
 
   
-  
 
   
-
-  
-  
-
   
 
   
@@ -52,7 +71,10 @@
   
 
   
-      ,"page10": {
+  
+
+  
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://rohinsood.github.io/csp/robots.txt",
