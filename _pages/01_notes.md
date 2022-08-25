@@ -10,19 +10,19 @@ permalink: /notes/
   </tr>
   <tr>
     <td>
-      <a href="{{site.baseurl}}/notes/bio">
+      <a href="{{site.baseurl}}/2022/08/25/bio.html">
         AP Biology
       </a>
     </td>
   </tr>
     <td>
-      <a href="{{site.baseurl}}/notes/chem">
+      <a href="{{site.baseurl}}/2022/08/25/chem.html">
         AP Chemistry
       </a>
     </td>
-  </tr>
+  <tr>
     <td>
-      <a href="{{site.baseurl}}/notes/csp"> 
+      <a href="{{site.baseurl}}/2022/08/25/csp.html"> 
         AP CS Principles
       </a>
     </td>
