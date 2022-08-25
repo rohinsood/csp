@@ -1,0 +1,3786 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Csp | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Csp" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="CSP Textbook Notes" />
+<meta property="og:description" content="CSP Textbook Notes" />
+<link rel="canonical" href="https://rohinsood.github.io/csp/2022/08/25/csp.html" />
+<meta property="og:url" content="https://rohinsood.github.io/csp/2022/08/25/csp.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Csp" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-25T00:00:00-05:00","datePublished":"2022-08-25T00:00:00-05:00","description":"CSP Textbook Notes","headline":"Csp","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohinsood.github.io/csp/2022/08/25/csp.html"},"url":"https://rohinsood.github.io/csp/2022/08/25/csp.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohinsood.github.io/csp/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/csp/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/notes/">Notes</a><a class="page-link" href="/csp/vocab/">Vocab</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Csp</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-25T00:00:00-05:00" itemprop="datePublished">
+        Aug 25, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      24 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><strong>CSP Textbook Notes</strong></p>
+
+<p><strong>Big Idea 1: Creative Development</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Computing innovations</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Inspiration to create this shit is found everywhere😈😈😈</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Constantly changing &amp; improving</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Applied in many other fields</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Simulations</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Cost-effective</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Easier to do large num of tests</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Con: does not account for all real-world variables</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Health &amp; medicine</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Data analytics or smth</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Hardware vs software</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Physical components vs virtual instructions via programming lang</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Computing innovation is about the <strong>software</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Computing hardware has gotten smaller and more powerful over the years</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Examples</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Software</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>OS</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Driverless vehicle software</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Dual monitor programs for windows</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Compiler</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Graphics card driver</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Hardware</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Motherboard</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Self-driving car</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Monitor</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Transistor</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Graphics card</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Collaboration</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Helps people learn from each other</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Diverse perspectives that avoid bias in computing development</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>For example, if the product is used by short and tall people, hiring only tall people to work on the product could bring bias; hiring both short and tall people brings new perspectives that may not have been achieved otherwise</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Companies hire ppl who can code and have good collaboration skills</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Effective collaboration can help one gain insight and knowledge by applying multiple perspectives, experiences, and skillsets</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Collaboration is a learned skill</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Includes communication, consensus building, conflict resolution, &amp; negotiation</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Collaboration can make others more self-aware</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Matches weaknesses with someone elses strengths -&gt; better product and new insight</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Facilitates the solving of computational problems by applying multiple perspectives and skill sets</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Combines different peoples resources. Talents &amp; experiences</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Not limited by location</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Current computational tools allow people in diff physical locations to share data &amp; info</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>How programs function</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong><em>Program</em></strong> is often referred to as <strong><em>software</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>A collection of prgram statements that perform a specific task when run byt hte computer</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Software is a set of instructions data or pgrams used to operate computers and execute specific tasks</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Difficult to determine if a program works for every condition</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Programmers can never have too many test cases</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Logical errors demonstrate why collaboration si so important in programming</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Common that a fresh set of eyes will be better than an entrenched programmer</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>A complex program can be described broadly by what it does</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Keeping the program <strong><em>abstract</em></strong> helps the user focus on using the program instead of looking at the code</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image1.png" alt="" /></p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>GUI is an example of abstraction, doesn’t show the user how it works</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Program Input</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>This is data sent to a computer for processing by a program</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Can come in multiple forms:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><strong><em>Tactile</em></strong></p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>User interaction</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Audio</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Visual</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Text</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Example of input/output</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image7.png" alt="" /></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>User says “hey phone” - triggers an <strong><em>event</em></strong></p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>The action that supplies input data to a program</p>
+                    </blockquote>
+
+                    <ul>
+                      <li>
+                        <blockquote>
+                          <p>Key press</p>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <blockquote>
+                          <p>Mouse click</p>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <blockquote>
+                          <p>Program is started</p>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <blockquote>
+                          <p>Anu other dewfinmed action taht affects the flow of execution</p>
+                        </blockquote>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Development process</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Can be ordered and intentional or exploratory in nature</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>A development process that is <strong><em>iterative</em></strong> requires refine ment and revisions based on feedback, testing, or reflection throughout the process, this may require revisiting earlier phases of the process</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><strong>#1) investigating and reflecting ↡</strong></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><strong>#2 designing ↡</strong></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><strong>#3) prototyping ↡</strong></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><strong>#4) testing ↻</strong></p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Example</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><em>#1) due to location restrictions, there is a large need for an effective way of communicating with a team</em></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><em>#2) design the steps needed to develop the multiple algorithms that allow for certain functionalities such as video conferencing</em></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><em>#3) write the program</em></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><em>#4) Execute the program to find errors</em></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>This process will be repeated until an acceptable product is reached or the programmer just runs out of time</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>A development process that is incremental is one that breaks the problem ito smaller pieces and makes sure each piece works before adding it to the whole</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>A program rarely works on the first development and breaking it into smaller parts of the code reduces the debugging process</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image9.png" alt="" /></p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Once they work, add the small chunks of code together to form the bigger program</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>The DESIGN of a program incorporates investigations to determine its reqs</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Most programs are for ppl not progs and to meet the needs of ppl, investigation mus tidentify the prgram constraints &amp; the concerns and interested of people who will uise the program</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Example of perfomraing investigation</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Colecting data in surveys</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>User testing</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Interviews</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Direct observations</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Example of design phase</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Brainstorming</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Planning and storyboarding</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Organizing the program into modules and function components</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Creating diagrams that represent the layouts of the user interface</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Developing a testing strat for the program</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Program Documentation</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>A written desc of the func of a code segment, event, procedure, or program and how it was developed</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Helps in developing and maintaining correct programs when working individually or in collaborative programming envs</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Progs should document a program throughout its development - helps them rember what they were thinking</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Comments</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Form of program docs written in otthj epgram that do not affect how the program runs</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Do not affect run speed</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can be used to acknowledge code segments written by someone else</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Should include the origin or authors name</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Program Errors</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Three types of errors can occur</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p><strong><em>Logic error</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p><strong><em>Syntax Error</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Mistake in the program where the rules of hte programming lang are not followed</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p><strong><em>Runtime Error</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Mistake in the program that occurs during the execution of a program</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Prog langs define their own runtime errors</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Big Idea 2: Data</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Bits represent data</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong><em>Bit</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Shorthand for a single binary digit and is etierh 0 or 1</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Byte</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>8 bits</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>0111 0011 - contains 1 byte and 8 bits</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Binary sequences</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Can be used to represent all digital data/Anything that can be stored on a computer can be repped as by bin. seqs.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>variable length</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Example</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>Colors</p>
+                    </blockquote>
+                  </li>
+                  <li>
+                    <blockquote>
+                      <p>Boolean logic</p>
+                    </blockquote>
+                  </li>
+                  <li>
+                    <blockquote>
+                      <p>Lists &amp; so on</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Some data may take many bits to represent it</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>For example:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>10 <strong><em>MP</em></strong> uses 10,000,000 <strong><em>pixels</em></strong></p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>1 pixel stores 6 bytes - 48 bits</p>
+                    </blockquote>
+                  </li>
+                  <li>
+                    <blockquote>
+                      <p>MP is one billion pixels</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <blockquote>
+                  <p>This means that there are 8 bits * 6 bytes * 10m pixels - 480,000,000 bits in a single 10 MP picture.</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>(common for videos to use 1,00,000 bits/sec)</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Abstractions</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Bits are grouped to represent abstractions</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>EX:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Numbers</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Chars</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Colors</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>&amp; so on</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Abstractions find common features to generalize the program</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Helps to shrink code &amp; reduces the chance of error</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Example:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image16.png" alt="" /></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>The programming language is an abstraction of machine code &amp; makes it easier to do stuff like add nums</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Analog vs digital data</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong><em>Ananalog signal</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>has values that change smoothly over time, rather than in discrete intervals</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Ex:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Pitch</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Volume</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Colors</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Position of a sprinter during a race</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>CONTINUOUS SIGNALS</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Digital signals</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>An analog signal that has been broken up into steps</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Analog data can closely approximate digital data using a <strong><em>sampling</em></strong> technique,</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>measuring values of the analog signal at regular intervals. The samples are measured to figure out the exact bits required to store each sample</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image11.png" alt="" /></p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p>(the use of digital data to approximate real-world analog data is an example of an abstraction)</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Consequences of using bits to represent data</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>A variable is an abstraction inside of a program that can hold a value</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Each variable had associated data storage that represents one value, or can hold multiple vals inside of a larger val</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>EG:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Integer: 4</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Real Number: 4.00</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Boolean: True</td>
+                        <td>False</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>String: “Novak the third”</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>List: [1, 1, 35, 6]</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Integers are most often represented by a fix number of bits</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Limits the num range of int vals &amp; math operations on such values</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Surpassing this limit throws an overflow error</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>AP Lang DOES NOT have num size limit - size of representable ints is limited ONLY by the szie of the computer’s memory</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>KNOW THAT SOME COMPUTER LANGS HAVE LIMITS ONT HE SIZE OF DATA TYPES FOR EXAM</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Number Systems</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Bin, decimal, &amp; hexadec, are all used to represent and investigate digital data</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>KNOW HOW TO CONVERT BIN TO DEC AND DEC TO BIN FOR EXAM</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image4.png" alt="" /></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Various Errors</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Several diff types of erroos can occur:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p><strong><em>Overflow Errors</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>In many programming langs, a fixed num of bits is used to rep characters or int limits</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>when the number of bits is not enough to represent the number</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>EX:</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>On a 4-bit computer (largest num is 1111 or 7<sub>dec</sub>)</p>
+                    </blockquote>
+                  </li>
+                  <li>
+                    <blockquote>
+                      <p>Running smth like</p>
+                    </blockquote>
+
+                    <ul>
+                      <li>
+                        <blockquote>
+                          <p>x=7</p>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <blockquote>
+                          <p>Y = x++</p>
+                        </blockquote>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <blockquote>
+                      <p>Returns an overflow error cuz its too large heheheaw</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p><strong><em>Run-time errors</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>A mistake in a program that happens when the program is run</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>EX: Accessing undeclared vars</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p><strong><em>Roundoff errors</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Occurs when decimals (real nums) are rounded, one comp might round to a diff place than another</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>EX: ⅓ = 0.3333333333333333333 on one comp OR ⅓ 0.3333 on a diff comp</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Lossy and Lossless Data compressions</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Reducing the size (number of bits) of transmitted or stored data</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>(fewer bits does not necessarily mean less info)</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Digital data compression often involves trade-offs in quality versus storage reqs</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Lossy Compression</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Can significantly reduce the file size for storage and transmission</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Trade-off is that u will not recover the original file &amp; SOME data will always be lost</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Used in sitch where minimizing transmission time &amp; data size is important</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Lossless Compression</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>NO DATA IS LOST</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Trade off is larger files that can be harder to store, transfer, and handle</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Used in sitch where quality or ability to reconstruct the orig file is important</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image12.png" alt="" /></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Information Extracted from Data</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Computer programs can be used to process info &amp; gain insight &amp; knowledge</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Info can include digital data such as</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Geographic data</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Premium data on social med sites based on usage</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Information</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>The collection of facts and patterns extracted from data</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Gaining insight from the above valuable involves a combination of…</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Statistics</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Mathematics</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Programming</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>And problem solving</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Large data sets may be analyzed computationally to reveal…</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Patterns</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Trends</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Associations</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>(can me bisinterpereted)</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>(May show correlation between vars, does not mean a relationship exists)</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>(additional research is needed to determine the exact nature)</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>The size of the data sets often affects the amount of info that can be extracted</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>A single source does often does not contain the data needed to draw a conclusion</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Combining data from a variety of sources may be necessary to have a conclusion</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Depending on how the data was collected, the info may not be uniform (varying from test case to test case)</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Data sets pose challenges regardless of size:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>The need to clean data</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Makes the data standardized (uniform) without needing to change anything</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Incomplete data</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Invalid data</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>The need to combine data sources</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Data can get too large for traditional data-processing applications</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>(ability to process data depends on the capabilities of the users and their tools)</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>EX:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Social media activity generates an enormous amount of data and uses a data processing application</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Too large to examine in hand in real-time</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>bias is often created by the types and sources of data being collected.</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>not eliminated by simply collecting more data since a large amount of data collected by humans will always reflect this bias</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>A large sample can magnify the bias associated with the data being used - can have little value if the sample is not representative of the population to which the results will be generalized</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>PRedicting algorithms</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Use info collected from big data to influence our daily lives</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>EX:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>A credit card company can use purchasing patterns to identify when to extend or flag a purchase for possible fraud</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Social media sites can use patterns to target advertising based on viewing habits</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Visualization of Data</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Using appropriate visualizations when presenting digitally processed data can help one gain insight and knowledge</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Data can lose their value if they cannot be presented in a way that can be interpreted</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can communicate info about data &amp; make more complex data easier to interperet</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Collum charts</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Line graphs</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Pie charts</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>XY charts</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Radar charts</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Histograms</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>waterfall charts</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>EX:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>this company notices that greater users =- more profit so they can spend more of their resources on advertisements and attracting more users</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image13.png" alt="" /></p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Predicting trends is not a guarrantee of future usage</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>(dangeruous to solely make decisions on good data rather than all data)</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><span class="underline">Use historical data to predict future events</span></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p><span class="underline">Used to build a mathematical model that encompasses trends</span></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><span class="underline">This is used on current data to make predictions</span></p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Privacy Concerns</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Arise through mass collection of data</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>May contain personal info</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Can affect choice in storage and transmitting</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Anything done online likely leads to the sharing of priv data</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>(trade off for the convenience of online shopping is the risk of violating privacy)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Metadata</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><span class="underline">data that describes data</span></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>EX:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image2.png" alt="" /></p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Pic of dog is data</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Filename, author, location, and time taken of this pic is metadata</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Used for finding, roganizing, and managing info</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can Increase effective use of data by providing addition info ab varius aspects</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Do not change primary data</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>BIG IDEA 3: Algorithms and Programming</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Abstraction</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Way to represent essential features without including the background details or explanations</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Reduce complexity</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Allow for efficient design</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>&amp; implementation of complex systems</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>GUI is an example of abstraction</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Math OPerators</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image10.png" alt="" /></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Modulus Notes</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>If the dividend is a <strong>multiple</strong> of the divisor, then the <strong>return val is 0</strong></p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>If the dividend is <strong>smaller</strong> than the divisor, then the <strong>return val is the dividend</strong> itself</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>If teh divisor is <strong>0, an ERROR</strong> is thrown</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>If <strong>0 is the dividend</strong>, the return val is 0</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Lists</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>START AT INDEX 1</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Example of data abstraction</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Relational and Bool Operators</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image8.png" alt="" /></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Searching</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong><em>Linear search (sequential search)</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Finds an element in <span class="underline">sorted or unsorted</span> list</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Sequentially checks EVERY element in the list</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Binary Search</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Finds element in a SORTED list</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Halves the num of elements that need to be searched after comparing the desired val to the middle point.</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>If they are unequal, then the half in which the target cannot be is eliminated</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>BIG IDEA 4: Computer systems and Networks</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Computing Devices</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>A computing device is a physical artifact that can run a program</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Computers</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Tabnlets</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Servers</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Routers</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Smart sensors</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Must be able to take inputs &gt; process such inputs &gt; calculate results based off such inputs</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Not all computing devices are computers</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Non-computer computing devices can be</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Calculator</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Printer</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Compuing system</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Group of omcputing devices and programs working together</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Ex: a computer network</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>A group of interconnected computing devices capable of sending or receiving data</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Autonomous Systems of the Internet</strong></p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image14.png" alt="" />**<br />
+**</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>This reps a computer network</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Each circ is one computer system</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Larger circs have larger <strong><em>bandwiths</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Maximum amount of data that can be sent in a fixed amount of time</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>A <strong><em>path</em></strong> between two computing devices is a sequence of directly connected computing devices</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Rounding is the process of finding a path form center to receiver</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>If path is broken, then the path will be rerouted (fault tolerant nature)</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Internet</em></strong> conmnects devices and networks from all over the world</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>physical network of fiber optics, radio transmitters, and cabling</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Devices and networks that make up the internet are connected and communicate using standardized, open communication <strong><em>protocols</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>An agreed-upon set of rules that specify the behavior of a system</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>These protocols have allowed for the internet to be scalable and meet new demands</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Internet Protocol</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Responsible for addressing and routing your online requests</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>A device is first assigned an IP before connecting to the internet</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>We are switching between the 4th and 6th version of the protocol (IPv4 &amp;&amp; IPv6)</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>IPv4 stores addresses in 32 bits, 2^32 combinations</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>IPv6 stores addresses in 128 bits, 2^128 combinations</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>NOT PERMANENTLY ASSIGNED TO A USER AND CAN BE CHANGED AT ANY TIME</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Transmission Control Protocol</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Protocol defines how computers send packets to each other.</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p><strong><em>packets</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Small chunks of data that are sent to other devices on a network (including the internet)</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Guide the rules on how data are subdivided into small packets before transmission</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image3.png" alt="" /></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>User Datagram Protocol</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Protocol that allows computer applications to send messages without checking fro missing packets</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Saves time to retransmit missing packets</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Not as reliable as TCP</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Fault Tolerance</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>When a system can support failures and continue to func</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>The internet is designed to be fault tolerant</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>If one sys fails, a diff path can be chosen when routing</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Redunancy</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Inclusion of extra paths that can mitigate the failure of a system if other components</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>End-to-end architecture</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>The breaking down and assembly of packets at each end</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>The middle is hidden by abstraction</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>EXAMPLE:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image6.png" alt="" /></p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>There are a multitude of paths that packets can take to travel between D (sender) and k(reciever)</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>Since there are multiple paths, packets are likely to arrive at the receiver out of order</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <blockquote>
+                  <p>If packets are not received, TCP will request the sender to resent the pissing packet</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>The IP of the send. And reciv. Are both in the header of the packet</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <blockquote>
+                  <p>When all packets are received, then the message will be reconstructed using their order found in the header</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Difference between internet and world wide web</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Internet refers to the hardware</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Made up of computers, cables, routers, etc.</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Glo0abl decentralized network that connects millions of computers</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>WWW refers to the software on the internet</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>HTTP is a protocol used by WWW to transmit data</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Internet allows access to the WWW which is a system of linked pages, programs, and files</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Efficiency of Solutions</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong><em>Sequential computing</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Computational model in which operations are performed in order, one at a time</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Takes as long as the sum of all the steps</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Parallle Computing</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Involves breaking up a task into smaller, sequential pieces</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>These are then executed at the same time</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>Each on its own processor or on a set of computers that have been networked together</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Takes AT LEAST as long as the longest branch in the prog</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Sequential Computing</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Problem broken into discrete instructures</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Executed one by one by a single computing device</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Having a sing CPU</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Parallel Computing</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Problem broken into discrete instructions</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Executed concurrently by using multiple CPU</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Takes as long as the longest task</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Consist of a parallel portion and a sequential portion</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>A parallel computing solution takes as long as its sequential tasks + the long of its parallel tasks</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image5.png" alt="" /></p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>2+1+4+3+1 = 11 secs tot</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Why is Parallel COmputing used?</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Needed fro real world sims and modeling</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Manyu things happen at the same time in the real world</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>EX:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Weather forecasting</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Flight simulators</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Car crash modeling</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Speedup</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Measured in the time to complete the task sequentially divided by the time to complete the task when done in parallel</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>SPEEDUP = (sequential run time)/(Parallel run time)</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Efficiency is still limited by the sequential portion</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Means that, at a certain point, parallel computing will not meaningfully increase efficientcy</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Multiple processors can operate independently but share the same memory resources</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image15.png" alt="" />**</p>
+
+              <p>**</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Distributed Computing</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Computational model in which multiple devices are used to run a program</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Many problems are too large and complex to be solved on a single computer</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Bcz of processing time or storage</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p><img src="https://rohinsood.github.io/csp/assets/img/2022-08-25-csp/media/image17.png" alt="" /></p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>BIG IDEA 5. Impact of Computing</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>The world wide web</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Use of the internet and WW are changing all the time</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Have forever changed how we do business and how people einteract</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Both positive and negative effects of the internet</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Digital divide</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Differences in acces to technology</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Including access to comps and internet</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Variables that affect digitale divide:</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Infrastructure: some parts of the world do not have access to the internet</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Education: a person could have access to the internet but not have the education ot use it</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Indifferent: a person could have access to the internet but choose not to use it</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Cost: the cost of accessing the internet can be unafforadable</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Efforts are being made to reduce the digital divide</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>EX:</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Google Project Loon uses balloons at the edge of space to provide infrastructure to to places around the world without internet access</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Ethical concern</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Official government policy is being announced on the internet,</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Poepl without internet acces remain in the dark</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Beneficial and harmful effects</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Computing inncovations can have both beneifical and harmful <strong><em>effect</em></strong> on Societies, Cultures, economies</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>An impact, result or outcome</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Beneficial results are contextual and terpertive</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Identification includes both the classification of the effect as either beneficial or harmful and justification for that classification</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>An impact beyond their intended purpose</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Computing algorithms can have unintended impacts</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Internet’s original purpose was to be used exclusively by academic, government, and scientific communities. 🥶🥶🥶🥶</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Innovations have changes way people do tasks</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Teachers no longer have to hand calc grades</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Effects can be societal, economic, and cultural and can be connected to a group of individuals</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>The impact of social media online access varies in different countries and in diff socioeconomic groups</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Mobile, wireless and networked computing have an impact on innovation throughout the world</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>The global distribution of computing resources raises issues of equity, access and power</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Groups and individuals are affected by the digital divide</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Networks adn infrastructure are supported by both commercial and governmental initiatives</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>People create computing innovations and cannot possible consider all possible uses of their innovation</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Rapid sharing of a programme with many usrs can result in significatn impacts beyondthe intended purpose</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Control over the information of a large group is hard to police</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Human Bias</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Computi9ng information reflect existing human bias</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Algorithms are helping people make their decisions that can have extreme ramifications</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Programmers should take action to reduce bias at all levels of development</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Crowdsourcing</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Practice of obtaining input or information from many people via the internet</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Accuracy of answers will vary</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Offerns new models for connecting business with funding</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Ubr connects drivers with people who need rides</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can connect social causes with funding</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>A site funds a robotics team</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Easy to post false causes</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Citizen science</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Scientific research using public participation in scientific research</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Conducted in whole or by part of individuals</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Many may or may not be scientists</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Contribute relavent data to research using their own computing devices</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Data collected is not always technical</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Legal and Ethical Concerns</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Material created on a computer is the intellectual property of the creator or organization</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Ease of access and distribution of digitized information raises intellectual property concerns regarding ownership value, And use.</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Algorithms on legitimate sharing sites have an obligation to safeguard intellectual property and remind the illegally shared content from their site</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Plagiarism</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Use of material created by someone else without permission and presented as one’s own</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Doing this with code can have legal consequences</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Napster did not have intellectual property and were closed and heavily fined</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Situations in which materials created by someone else can be used legally</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p><strong><em>Creative Commons</em></strong></p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>an American nonprofit dedicated to expanding the range of creative works available for others to build upon and share legally</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>PUBLIC COPYRIGHT LISCNECE</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Allows for free distribution of copyrighted work</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>Gies people theright to USE, SHARE, AND BUILD UPON, an authors work</p>
+                    </blockquote>
+                  </li>
+                  <li>
+                    <blockquote>
+                      <p>Allow creators to communicate which rights they reserve and whcih rights they waive for ht ebenefits of recipients or other creators</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Can vary from letting others copy, distribute, display and perform only original copies of work while not allowing modification without the authors’ permission to allowing for modification if credit is given to the author</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>6 DIFF LEVELS OF THIS LISCENCE</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Common in education</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>Where teachers share their lessons for students</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Not used when seeking profit</p>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <blockquote>
+                      <p>Can bring recognition to author which could result in a profit</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Open source are programs that are made freely available and may be redistributed and modified</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Open access is online research output free of all restrictions on access and free of many restrictions on use</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Suhc as copyright or liscence restrictions</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Malicious information can disguise itself as legitimate info, making it hard to figure out what is real</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Raises legal and ethical concernse</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Computing innovations taht have raised legal and ethical concerns include</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Developmenet of software that allows access to digital media downloads and streaming</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Alogirhtms that include bias</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Existence of computing devices that collect and analyze data by continuously monitoring activities</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Safe Computing</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Security is needed to protect the confidentiality, integrity, and availability of info</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Protects data from cuner attacks and hacking</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Privacy is the right to control data generated by one’s usage of computing innovation and restrict the flow of that data to third parties</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Privacy and sec are concerns with any internet interaction</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Personally identifiable information</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Information about an indvudial that identifies, links, relates, or describes that person</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Ss number</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Age</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Race</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Phone number</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Med info</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Financial info</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Biometric data</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Can be processed and analyzed</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Gain insight on how to interact with customers</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>PII is sold to targeted advertisers</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Ethical concerns about how companies handle the sensitive info of their customers</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Once info is online, it becomes difficult to delete</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Technology enables the collection, use, and exploitation of information about, by and for individuals, groups, and instructions.</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Search engines can record and maintain a history of searches made by users</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Websites can record and maintain a history of individuals who have viewed their pages</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Devices, websites, adn networks can collect info ab a user’s loc</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Metadata can reduce privacy of the user if rapidly shared</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Multifactor authentication</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Method of computer access control in which a user is granted access only after suicccessfulyy presenting several pieces of the following 2 categories</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Knowledge: smth that the user knows</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Possession: smth that the user has</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Inherence: smth the user is</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Requires at least 2 steps</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Each step adds a layer of security</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Digital certificate authorities issue digital certificates that validate the ownership of encryption keys used in secure communications and are based on a trust model</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Encryption</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Uses cryptographic algorithms to <strong><em>encrypt</em></strong> data</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Process of encoding data to prevent unauthorized access</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Decryption</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>The process of decoding the data</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Symmetric key encryption</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Uses the same key for both encryption and decrypotion</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Relies on bith sides keeping the key a secret</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p><strong><em>Public Key Encryption</em></strong></p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Uses two keys</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>One private</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Used for decryption</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>One public</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Anyone with the public key can encrypt data</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Malware</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Malicious software intended to damage a computing system or take partial control of its operations</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Spread over..</p>
+            </blockquote>
+
+            <ul>
+              <li>
+                <blockquote>
+                  <p>Email</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Executables</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Instant messages</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Social media</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Freeware</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Shareware</p>
+                </blockquote>
+              </li>
+              <li>
+                <blockquote>
+                  <p>Etc</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <blockquote>
+              <p>Used as cyber weapons</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Searched for outdated software with unpaatched sec flaws that can be exploited to compromise those systems</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Real world systems have errors or design flaws that can be exploited</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Computer Viruses</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Malicious programs taht can copy temselves and gain access to computer in an unauthorized way</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Viruses often perform some type of harmful activity on infected host computers</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Attach themselves to legitimate programs and start running independently on a computer</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can alter the way computer operates or stop it from working entirety</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Phishing</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Technique that directs users to unrelated sites that trick the user into giving personal data</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Pose as legitimate sources</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Acces sensitive online information</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <blockquote>
+          <p>Often update their tactics, so they can be hard to identify</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Commonly involves a malicious link that prompts to download a malware or other harmful things</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Keylogging</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Use of a program to record every keystroke on a computer in order to gain fraudulent access to pwd</p>
+        </blockquote>
+      </li>
+      <li>
+        <blockquote>
+          <p>Can be hardware</p>
+        </blockquote>
+
+        <ul>
+          <li>
+            <blockquote>
+              <p>Installed inbetween the keys and keyboard</p>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>Cannot be detected by software</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Rogue Access Point</strong></p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <blockquote>
+          <p>Wireless Point on a public network in which data can be intercepted, analyzed, and modified unauthorized by a secure network</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </div><a class="u-url" href="/csp/2022/08/25/csp.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/csp/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/csp/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/csp/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
