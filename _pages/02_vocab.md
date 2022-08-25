@@ -4,14 +4,36 @@ title: Vocab
 permalink: /vocab/
 ---
 
-| Term | Definition |
-| --- | --- |
-| GitHub | 🧑‍💻 Code hosting service on the web |
-| Markdown | 🖋️ Markup language for formatting plain text |
-| Python | 🐍 High-level object-oriented scripting language |
-| Fastpages | ⏩ Easy to use blogging platform with Jupyter Notebook implenetation |
-| Repository | 📂 Where code on GitHub is stored |
-| Push/Pull | 🪢 Sending and recieving code to and from Github |
-> 🧠 Terms and Definitions for APCSP
+<table style="font-size: 2.5rem">
+  <tr>
+    <th>Term</th>
+    <th>Definition</th>
+  </tr>
+  <tr>
+    <td>GitHub</td>
+    <td>🧑‍💻 Code hosting service on the web</td>
+  </tr>
+  <tr>
+    <td>Markdown</td>
+    <td>🖋️ Markup language for formatting plain text</td>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td>🐍 High-level object-oriented scripting language</td>
+  </tr>
+  <tr>
+    <td>Fastpages</td>
+    <td>⏩ Easy to use blogging platform with Jupyter Notebook implenetation</td>
+  </tr>
+  <tr>
+    <td>Repository</td>
+    <td>📂 Where code on GitHub is stored</td>
+  </tr>
+  <tr>
+    <td>Push/Pull</td>
+    <td>🪢 Sending and recieving code to and from GitHub</td>
+  </tr>
+</table>
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+
+> 🧠 Terms and Definitions for APCSP

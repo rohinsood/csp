@@ -4,7 +4,28 @@ title: Notes
 permalink: /notes/
 ---
 
-# My Notes for AP Biology
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+<table style="font-size: 2.5rem">
+  <tr>
+    <th>Class</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="{{site.baseurl}}/notes/bio">
+        AP Biology
+      </a>
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <a href="{{site.baseurl}}/notes/chem">
+        AP Chemistry
+      </a>
+    </td>
+  </tr>
+    <td>
+      <a href="{{site.baseurl}}/notes/csp"> 
+        AP CS Principles
+      </a>
+    </td>
+  </tr>
+</table>
