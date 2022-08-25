@@ -15,7 +15,6 @@ permalink: /notes/
       </a>
     </td>
   </tr>
-    <tr>
     <td>
       <a href="{{site.baseurl}}/notes/chem">
         AP Chemistry
