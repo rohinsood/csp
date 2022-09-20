@@ -1,0 +1,47 @@
+---
+layout: default
+title: TODO
+permalink: /todo/
+---
+
+<h1> TODO LIST 😩😩😩😩😩😩</h1>
+
+<form id="todo-form">
+  <input type="text" placeholder="task name" id="todo-name">
+  <input type="submit" value="submit">
+</form>
+
+<ul id="todo-list"></ul>
+
+</ol>
+
+<script>
+
+  document.getElementById("todo-form").onsubmit = function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("todo-name").value;
+
+    document.getElementById("todo-name").value = "";
+
+    const todoItem = document.createElement("li");
+    const todoText = document.createTextNode(name);
+
+    todoItem.appendChild(todoText);
+    todoItem.classList.add("todo-item");
+
+    todoItem.onclick = function () {
+      document.getElementById("todo-list").removeChild(todoItem);
+    }
+
+    document.getElementById("todo-list").appendChild(todoItem);
+  }
+
+</script>
+
+<style>
+  .todo-item:hover {
+    text-decoration: line-through;
+  }
+
+</style>
