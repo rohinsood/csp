@@ -520,4 +520,6 @@ canvas { filter: invert(100%); }
 
 li .post-meta-description { color: rgba(255, 255, 255, 0.78) !important; }
 
+input { color: rgba(255, 255, 255, 0.78) !important; border-color: rgba(255, 255, 255, 0.78) !important; }
+
 /*# sourceMappingURL=style.css.map */
