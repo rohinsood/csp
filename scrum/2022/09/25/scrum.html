@@ -112,7 +112,7 @@ window.onload = wrap_img;
   <div id="steps-container">
     
   </div>
-  
+
 </body>
 
 <style>
@@ -122,6 +122,9 @@ window.onload = wrap_img;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 4px;
+    gap: 4px;
+    flex-grow: 4;
   }
 
   #step-box {
@@ -129,20 +132,10 @@ window.onload = wrap_img;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 4px;
     padding-left: 6px;
     padding-right: 6px;
     border-radius: 8px;
     text-align: center;
-  }
-
-  p {
-    text-align: center;
-    background-color: black;
-  }
-
-  h2 {
-    background-color: black;
   }
 
 </style>
@@ -158,6 +151,8 @@ window.onload = wrap_img;
     num.innerHTML = i + 1;
 
     let step = document.createElement("p");
+    step.style.textAlign = "center";
+    step.style.backgroundColor = "black";
     step.innerHTML = value;
 
     let box = document.createElement("div");
