@@ -5,16 +5,22 @@ layout: default
 permalink: /clock/
 ---
 
-<h1 id="clock"></h1>
+<div style="display: flex; align-items: center; justify-content: center;">
+  <h1 id="date"></h1>
+  <h2 id="time"></h1>
+</div>
 
 <script>
-let clockElement = document.getElementById('clock')
+let timeElement = document.getElementById('time')
+let dateElement = document.getElementById('date')
 
 clock();
 
 function clock() {
   let date = new Date();
-  clockElement.textContent = "Locale time: " + date.toLocaleString();
+  const date_time = date.toLocaleString().split(",");
+  dateElement.textContent = "Date: " + date_time[0];
+  timeElement.textContent = "Time: " + date_time[1].replace(/\s/g, '');
 }
 
 setInterval(clock, 1000);
