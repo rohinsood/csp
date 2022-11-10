@@ -1,0 +1,21 @@
+---
+title: Extra Credit
+hide: true
+layout: default
+permalink: /clock/
+---
+
+<h1 id="clock"></h1>
+
+<script>
+let clockElement = document.getElementById('clock')
+
+clock();
+
+function clock() {
+  let date = new Date();
+  clockElement.textContent = "Locale time: " + date.toLocaleString();
+}
+
+setInterval(clock, 1000);
+</script>
