@@ -10,16 +10,16 @@ permalink: /clock/
 <body>
 
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <h1 id="date"></h1>
-    <h2 id="time"></h2>
-    <h2 id="counter"></h2>
+    <h1 id="date2"></h1>
+    <h2 id="time2"></h2>
+    <h2 id="counter2"></h2>
   </div>
 </body>
 
 <script>
-  let timeElement = document.getElementById('time')
-  let dateElement = document.getElementById('date')
-  let counterElement = document.getElementById('counter')
+  let time2Element = document.getElementById('time2')
+  let date2Element = document.getElementById('date2')
+  let counter2Element = document.getElementById('counter2')
 
   let count = 47
 
@@ -28,16 +28,16 @@ permalink: /clock/
   increment();
 
   function clock() {
-    let date = new Date();
-    const date_time = date.toLocaleString().split(",");
-    dateElement.textContent = "Date: " + date_time[0];
-    timeElement.textContent = "Time: " + date_time[1].replace(/\s/g, '');
+    let date2 = new date2();
+    const date2_time2 = date2.toLocaleString().split(",");
+    date2Element.textContent = "date2: " + date2_time2[0];
+    time2Element.textContent = "time2: " + date2_time2[1].replace(/\s/g, '');
   }
 
   function increment() {
     count += 1;
 
-    counterElement.textContent = "Backend Counter: " + count
+    counter2Element.textContent = "Backend counter: " + count
   }
 
   setInterval(clock, 1000);
