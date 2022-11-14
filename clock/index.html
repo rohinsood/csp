@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Extra Credit | Rohin’s Fastpages</title>
+<title>Clock ⏰ | Rohin’s Fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Extra Credit" />
+<meta property="og:title" content="Clock ⏰" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class" />
 <meta property="og:description" content="🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class" />
@@ -15,9 +15,9 @@
 <meta property="og:site_name" content="Rohin’s Fastpages" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Extra Credit" />
+<meta property="twitter:title" content="Clock ⏰" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class","headline":"Extra Credit","url":"https://rohinsood.github.io/csp/clock/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class","headline":"Clock ⏰","url":"https://rohinsood.github.io/csp/clock/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/csp/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohinsood.github.io/csp/feed.xml" title="Rohin's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/csp/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -64,60 +64,52 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/notes/">Notes</a><a class="page-link" href="/csp/vocab/">Vocab</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/about/">About Me</a><a class="page-link" href="/csp/todo/">TODO</a><a class="page-link" href="/csp/api/">API</a><a class="page-link" href="/csp/clock/">Extra Credit</a></div>
+        <div class="trigger"><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/notes/">Notes</a><a class="page-link" href="/csp/vocab/">Vocab</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/about/">About Me</a><a class="page-link" href="/csp/todo/">TODO</a><a class="page-link" href="/csp/api/">API</a><a class="page-link" href="/csp/clock/">Clock ⏰</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <h1 id="date"></h1>
-  <h2 id="time"></h2>
-  <h2 id="counter"></h2>
-</div>
+        <html>
+
+<body>
+
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <h1 id="date2"></h1>
+    <h2 id="time2"></h2>
+    <h2 id="counter2"></h2>
+  </div>
+</body>
 
 <script>
-let timeElement = document.getElementById('time')
-let dateElement = document.getElementById('date')
-let counterElement = document.getElementById('counter')
+  let time2Element = document.getElementById('time2')
+  let date2Element = document.getElementById('date2')
+  let counter2Element = document.getElementById('counter2')
 
-const url = "https://teambrobro.tk/likes"
+  let count = 47
 
+  clock();
 
-const options = {
-  method: 'GET',
-  mode: 'cors',
-  cache: 'default',
-  credentials: 'omit',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-}
+  increment();
 
-clock();
+  function clock() {
+    let date2 = new date2();
+    const date2_time2 = date2.toLocaleString().split(",");
+    date2Element.textContent = "date2: " + date2_time2[0];
+    time2Element.textContent = "time2: " + date2_time2[1].replace(/\s/g, '');
+  }
 
-function clock() {
-  let date = new Date();
-  const date_time = date.toLocaleString().split(",");
-  dateElement.textContent = "Date: " + date_time[0];
-  timeElement.textContent = "Time: " + date_time[1].replace(/\s/g, '');
+  function increment() {
+    count += 1;
 
-  fetch(url, options)
-    .then(r => {
+    counter2Element.textContent = "Backend counter: " + count
+  }
 
-      r.json().then(ting => {
+  setInterval(clock, 1000);
 
-        counter.textContent = ting
-
-      })
-
-    })
-    .catch(err => {
-      console.log(err)
-    })
-}
-
-setInterval(clock, 1000);
+  setInterval(increment, 60000)
 </script>
+
+</html>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/csp/"></data>
@@ -139,7 +131,7 @@ setInterval(clock, 1000);
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/csp/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/csp/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"></ul>
 </div>
 
   </div>

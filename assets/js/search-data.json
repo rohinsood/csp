@@ -211,18 +211,12 @@
   
 
   
-      ,"page7": {
-          "title": "Extra Credit",
-          "content": ". . .",
-          "url": "https://rohinsood.github.io/csp/clock/",
-          "relUrl": "/clock/",
-          "date": ""
-      }
-      
+
   
 
   
 
+  
   
 
   
@@ -243,7 +237,7 @@
   
 
   
-      ,"page16": {
+      ,"page17": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://rohinsood.github.io/csp/robots.txt",
