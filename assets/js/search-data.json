@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Binary Math",
-            "content": "Binary Math with Conversions . Plus Binary Octal Hexadecimal Decimal Minus . +1 | 000000000000000000000000 | 0 | 0 | 0 | -1 | . Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | . | | | | | | | | | | | | | | | | | | | | | | | | . | | | | | | | | | . | | | | | | | | | .",
+            "content": "&lt;!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable --&gt; &lt;!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one --&gt; &lt;!-- Hack 3: do your own thing --&gt; . Binary Math with Conversions . Plus Binary Octal Hexadecimal Decimal Minus . +1 | 000000000000000000000000 | 0 | 0 | 0 | -1 | . Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | Turn on | . | | | | | | | | | | | | | | | | | | | | | | | | . | | | | | | | | | . | | | | | | | | | .",
             "url": "https://rohinsood.github.io/csp/2022/11/15/binary.html",
             "relUrl": "/2022/11/15/binary.html",
             "date": " • Nov 15, 2022"
