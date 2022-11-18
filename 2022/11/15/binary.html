@@ -70,15 +70,15 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p><code class="language-plaintext highlighter-rouge">&lt;!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable --&gt;
-&lt;!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one --&gt;
-&lt;!-- Hack 3: do your own thing --&gt;</code></p>
+        <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
+<!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
+<!-- Hack 3: do your own thing -->
 
 <div class="container bg-primary justify-content-md-center">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
     </header>
-    <div style="display: flex; align-items: center; justify-content: center; height: ;" class="color-code">
+    <div style="display: flex; align-items: center; justify-content: center; height: 48px;" id="color-code">
     </div>
     <div class="row justify-content-md-center">
         <div class="col-8">
@@ -339,7 +339,7 @@ const MSG_OFF = "Turn off";
 const IMAGE_OFF = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KKiw37bo5x7M3Kf1j-BK4m4yKEGym3H9gQ&usqp=CAU"
 
 let RGB = Math.floor(Math.random()*16777215).toString(16); 
-document.getElementById("color-code").style.backgroundColor = rgb;
+document.getElementById("color-code").style.backgroundColor = RGB;
 
 // return string with current value of each bit
 function getBits() {
@@ -397,9 +397,9 @@ function toggleBit(i) {
     const binary = getBits();
     setConversions(binary);
 
-    rgb = Math.floor(Math.random()*16777215).toString(16);
+    RGB = Math.floor(Math.random()*16777215).toString(16);
 
-    document.getElementById("color-code").style.backgroundColor = rgb;
+    document.getElementById("color-code").style.backgroundColor = "#" + RGB;
 }
 // add is positive integer, subtract is negative integer
 function add(n) {
