@@ -35,5 +35,22 @@ permalink: /vocab/
   </tr>
 </table>
 
+| Term | Definition |
+| ----------- | ----------- |
+| Variables | 🏀 an element, feature, or factor that is liable to vary or change. |
+| Data types | 😩 type that which data is stored |
+| Assignment operators | 🙏 What sets a variable to a value |
+| Lists | 🚨 Sequences of variables stored in the same sctructure |
+| 2D Lists | 😎 LIsts within a list |
+| Dictionaries | 😁 Data structure that which stores keys and values |
+| Boolean Expressions | ♟️ True or false expressions |
+| Iterations | 🤓 Repetiion of a process |
+| Characters | 💌 Single characters |
+| Strings | 🧵 Collection of characters |
+| Selection | 🤏 Selectively choosing which code to run using boolean expressions |
+| Comparison operators | 💀 >, <, ==, what is used to compare two values |
+| For Loops | 😳 Iteration for a set number of times |
+| While loops | 😶‍🌫️ Iteration as long as a condition is false |
+
 
 > 🧠 Terms and Definitions for APCSP
