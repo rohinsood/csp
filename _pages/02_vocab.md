@@ -4,6 +4,7 @@ title: Vocab
 permalink: /vocab/
 ---
 
+# Tri 1
 <table style="font-size: 2.5rem">
   <tr>
     <th>Term</th>
@@ -35,6 +36,7 @@ permalink: /vocab/
   </tr>
 </table>
 
+# Tri 2
 | Term | Definition |
 | ----------- | ----------- |
 | Variables | 🏀 an element, feature, or factor that is liable to vary or change. |
