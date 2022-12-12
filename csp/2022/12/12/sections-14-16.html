@@ -371,31 +371,34 @@ John
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
 
   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Random Board #</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
 
   <span class="n">board</span> <span class="o">=</span> <span class="p">[]</span>
 
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+  <span class="c1"># creates a board with 25 empty spaces with the name "[ ]"</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
 
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
       <span class="n">board</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"[ ]"</span><span class="p">)</span>
 
-
+  <span class="c1"># chooses a random emoji</span>
   <span class="n">robot_direction</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"[⬆️]"</span><span class="p">,</span> <span class="s2">"[⬇️]"</span><span class="p">,</span> <span class="s2">"[⬅️]"</span><span class="p">,</span> <span class="s2">"[➡️]"</span><span class="p">]</span>
   <span class="n">robot_direction</span> <span class="o">=</span> <span class="n">robot_direction</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
 
   <span class="n">goal</span> <span class="o">=</span> <span class="s2">"[🥅]"</span>
 
+  <span class="c1"># randomize 14 different indexes to be used of the board position, the last two </span>
+  <span class="c1"># numbers will be used to set the goal &amp; positions </span>
   <span class="n">positions</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">24</span><span class="p">),</span> <span class="mi">14</span><span class="p">)</span>
 
   <span class="n">board</span><span class="p">[</span><span class="n">positions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">robot_direction</span>
 
-
   <span class="n">board</span><span class="p">[</span><span class="n">positions</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="n">goal</span>
 
-  <span class="n">positions</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="c1"># remove the two already used positions</span>
+  <span class="n">positions</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
   <span class="n">positions</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
   <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">:</span>
@@ -404,7 +407,10 @@ John
 
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)):</span>
 
+    <span class="c1"># starts a new line if positions have been printed already</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span> <span class="k">if</span> <span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">else</span> <span class="nb">print</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+  
+  <span class="nb">print</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -418,23 +424,26 @@ John
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Random Board #1)
-[ ] [ ] [X] [⬅️] [X]
-[X] [X] [ ] [X] [ ]
-[ ] [ ] [X] [ ] [X]
-[ ] [ ] [ ] [X] [X]
-[X] [X] [X] [🥅] [ ]
-Random Board #2)
-[ ] [X] [ ] [X] [X]
-[🥅] [X] [ ] [X] [ ]
-[X] [ ] [X] [X] [⬆️]
+[ ] [X] [🥅] [ ] [X]
+[ ] [X] [X] [X] [ ]
+[X] [ ] [⬅️] [ ] [ ]
+[X] [X] [ ] [X] [X]
 [ ] [ ] [X] [X] [ ]
-[ ] [X] [ ] [X] [ ]
+
+Random Board #2)
+[X] [X] [X] [X] [ ]
+[X] [X] [ ] [X] [ ]
+[ ] [ ] [ ] [ ] [⬅️]
+[🥅] [ ] [X] [X] [X]
+[ ] [ ] [X] [X] [ ]
+
 Random Board #3)
-[X] [ ] [X] [🥅] [ ]
-[X] [ ] [X] [X] [X]
-[ ] [ ] [X] [ ] [X]
-[⬅️] [ ] [X] [ ] [X]
+[X] [🥅] [ ] [ ] [X]
 [X] [X] [ ] [ ] [ ]
+[ ] [X] [X] [X] [ ]
+[ ] [X] [ ] [➡️] [X]
+[X] [X] [ ] [X] [ ]
+
 </pre>
 </div>
 </div>
