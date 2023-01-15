@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Object Oriented Programming with Python | Rohin’s Fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Object Oriented Programming with Python" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class" />
+<meta property="og:description" content="🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class" />
+<link rel="canonical" href="https://rohinsood.github.io/csp/2023/01/10/oop.html" />
+<meta property="og:url" content="https://rohinsood.github.io/csp/2023/01/10/oop.html" />
+<meta property="og:site_name" content="Rohin’s Fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-10T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Object Oriented Programming with Python" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-10T00:00:00-06:00","datePublished":"2023-01-10T00:00:00-06:00","description":"🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class","headline":"Object Oriented Programming with Python","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohinsood.github.io/csp/2023/01/10/oop.html"},"url":"https://rohinsood.github.io/csp/2023/01/10/oop.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohinsood.github.io/csp/feed.xml" title="Rohin's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/csp/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp/">Rohin&#39;s Fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/notes/">Notes</a><a class="page-link" href="/csp/vocab/">Vocab</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/about/">About Me</a><a class="page-link" href="/csp/todo/">TODO</a><a class="page-link" href="/csp/api/">API</a><a class="page-link" href="/csp/clock/">Clock ⏰</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <table style="text-align: center;">
+    <tr>
+      <td>
+        <a href="/csp/">HOME</a>
+      </td>
+      <td>
+        <a href="/csp/todo">TODO</a>
+      </td>
+      <td>
+        <a href="/csp/notes">NOTES</a>
+      </td>
+    </tr>
+  </table>
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Object Oriented Programming with Python</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-10T00:00:00-06:00" itemprop="datePublished">
+        Jan 10, 2023
+      </time>
+       <!-- • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span>-->
+    </p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <!-- <div class="px-2">
+
+    <a href="https://github.com/rohinsood/csp/tree/master/_notebooks/2023-01-10-oop.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/csp/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/rohinsood/csp/master?filepath=_notebooks%2F2023-01-10-oop.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/rohinsood/csp/blob/master/_notebooks/2023-01-10-oop.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/csp/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Frohinsood%2Fcsp%2Fblob%2Fmaster%2F_notebooks%2F2023-01-10-oop.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/csp/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+ -->
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Full-output">Full output </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-01-10-oop.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">def</span> <span class="nf">calculate_age</span><span class="p">(</span><span class="n">born</span><span class="p">):</span>
+    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">born</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">born</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">born</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">classOf</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span> <span class="o">=</span> <span class="n">classOf</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span>
+
+    <span class="nd">@uid</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span>
+
+    <span class="nd">@dob</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dob</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span>
+
+    <span class="nd">@classOf</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classOf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span> <span class="o">=</span> <span class="n">classOf</span>
+
+    <span class="k">def</span> <span class="nf">is_uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">==</span> <span class="n">uid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"..."</span>
+
+    <span class="k">def</span> <span class="nf">set_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"sha256"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">is_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">toJSON</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">excluded_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"_password"</span><span class="p">,</span> <span class="s2">"_dob"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span> <span class="n">v</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">excluded_fields</span>
+            <span class="p">}</span>
+            <span class="o">|</span> <span class="p">{</span><span class="s2">"age"</span><span class="p">:</span> <span class="n">calculate_age</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="p">)},</span>
+            <span class="bp">cls</span><span class="o">=</span><span class="n">DateTimeEncoder</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'name: "</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">", class of: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">classOf</span><span class="si">}</span><span class="s1">, id: "</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s1">", psw: "</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="si">}</span><span class="s1">"'</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Person(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s2">, classOf=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span><span class="si">}</span><span class="s2">, uid=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_uid</span><span class="si">}</span><span class="s2">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s2">)"</span>
+
+<span class="k">def</span> <span class="nf">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">psw</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">is_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">is_password</span><span class="p">(</span><span class="n">psw</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"* "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">class</span> <span class="nc">DateTimeEncoder</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">JSONEncoder</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+
+<span class="sd">"""</span>
+<span class="sd">The point of this class is to store the name, team, standings, points, nationality, likes, dislikes, and comments for a driver instance</span>
+<span class="sd">"""</span>
+<span class="k">class</span> <span class="nc">Driver</span><span class="p">:</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driver_name</span><span class="p">,</span> <span class="n">team_name</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">nationality</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">driver_name</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_team</span> <span class="o">=</span> <span class="n">team_name</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_standings</span> <span class="o">=</span> <span class="n">position</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_points</span> <span class="o">=</span> <span class="n">points</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_nationality</span> <span class="o">=</span> <span class="n">nationality</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_likes</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_dislikes</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_comments</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="sd">"""</span>
+<span class="sd">    example comment</span>
+<span class="sd">    {</span>
+<span class="sd">      "name": "Sean"</span>
+<span class="sd">      "message": "This driver is insane!!"</span>
+<span class="sd">    }</span>
+<span class="sd">    """</span>
+
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">team</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_team</span>
+
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">standings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_standings</span>
+
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">nationality</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nationality</span>
+
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">likes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_likes</span>
+
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">dislikes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dislikes</span>
+
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">comments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_comments</span>
+
+  <span class="k">def</span> <span class="nf">incrementLikes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_likes</span> <span class="o">+=</span> <span class="mi">1</span>
+
+  <span class="k">def</span> <span class="nf">incrementDislikes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_dislikes</span> <span class="o">+=</span> <span class="mi">1</span>
+
+  <span class="k">def</span> <span class="nf">addComment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">comment</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_comments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span>
+
+  <span class="nd">@comments</span><span class="o">.</span><span class="n">getter</span>
+  <span class="k">def</span> <span class="nf">comments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_comments</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+
+    <span class="c1">#############################</span>
+    <span class="c1"># USER TINGS</span>
+    <span class="c1">#############################</span>
+
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"Thomas Edison"</span><span class="p">,</span>
+        <span class="n">classOf</span><span class="o">=</span><span class="mi">2024</span><span class="p">,</span>
+        <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+        <span class="n">uid</span><span class="o">=</span><span class="s2">"toby"</span><span class="p">,</span>
+        <span class="n">password</span><span class="o">=</span><span class="s2">"123toby"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"Nicholas Tesla"</span><span class="p">,</span>
+        <span class="n">classOf</span><span class="o">=</span><span class="mi">2025</span><span class="p">,</span>
+        <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+        <span class="n">uid</span><span class="o">=</span><span class="s2">"nick"</span><span class="p">,</span>
+        <span class="n">password</span><span class="o">=</span><span class="s2">"123nick"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"Alexander Graham Bell"</span><span class="p">,</span>
+        <span class="n">classOf</span><span class="o">=</span><span class="mi">2024</span><span class="p">,</span>
+        <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span>
+        <span class="n">uid</span><span class="o">=</span><span class="s2">"lex"</span><span class="p">,</span>
+        <span class="n">password</span><span class="o">=</span><span class="s2">"123lex"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"Eli Whitney"</span><span class="p">,</span>
+        <span class="n">classOf</span><span class="o">=</span><span class="mi">2026</span><span class="p">,</span>
+        <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+        <span class="n">uid</span><span class="o">=</span><span class="s2">"eli"</span><span class="p">,</span>
+        <span class="n">password</span><span class="o">=</span><span class="s2">"123eli"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"Hedy Lemarr"</span><span class="p">,</span>
+        <span class="n">classOf</span><span class="o">=</span><span class="mi">2027</span><span class="p">,</span>
+        <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+        <span class="n">uid</span><span class="o">=</span><span class="s2">"hedy"</span><span class="p">,</span>
+        <span class="n">password</span><span class="o">=</span><span class="s2">"123hedy"</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">,</span> <span class="n">u5</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 1: find user 3"</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="s2">"123lex"</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Test 2: change user 3"</span><span class="p">)</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"John Mortensen"</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="s2">"jm1021"</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="s2">"123qwerty"</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="s2">"123qwerty"</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Test 3: generate JSON"</span><span class="p">)</span>
+    <span class="n">json_strings</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">toJSON</span><span class="p">()</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">users</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">json_strings</span><span class="p">))</span>
+
+    <span class="c1">#############################</span>
+    <span class="c1"># DRIVER TINGS</span>
+    <span class="c1">#############################</span>
+
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"9275b62a1fmsh3b832340dafb492p1abc77jsn58ef554feee6"</span><span class="p">,</span>
+   	  <span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"f1-live-motorsport-data.p.rapidapi.com"</span>
+    <span class="p">}</span>
+
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="n">url</span><span class="o">=</span><span class="s2">"https://f1-live-motorsport-data.p.rapidapi.com/drivers/standings/2022"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"API Request failed:"</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+      <span class="n">exit</span>
+
+    <span class="n">all_drivers</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">'results'</span><span class="p">]</span>
+
+    <span class="n">demo_drivers</span> <span class="o">=</span> <span class="n">all_drivers</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+
+    <span class="n">driver_objects</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">driver</span> <span class="ow">in</span> <span class="n">demo_drivers</span><span class="p">:</span>
+      <span class="n">driver_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+          <span class="n">Driver</span><span class="p">(</span><span class="n">driver_name</span><span class="o">=</span><span class="n">driver</span><span class="p">[</span><span class="s2">"driver_name"</span><span class="p">],</span> <span class="n">team_name</span><span class="o">=</span><span class="n">driver</span><span class="p">[</span><span class="s2">"team_name"</span><span class="p">],</span>
+                <span class="n">position</span><span class="o">=</span><span class="n">driver</span><span class="p">[</span><span class="s2">"position"</span><span class="p">],</span> <span class="n">points</span><span class="o">=</span><span class="n">driver</span><span class="p">[</span><span class="s2">"points"</span><span class="p">],</span> <span class="n">nationality</span><span class="o">=</span><span class="n">driver</span><span class="p">[</span><span class="s2">"nationality"</span><span class="p">])</span>
+      <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Driver objects:"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">driver_objects</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Test 4: add comments &amp; likes"</span><span class="p">)</span>
+    <span class="n">driver_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">addComment</span><span class="p">({</span>
+      <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Dontavious"</span><span class="p">,</span>
+      <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"You're trash!!"</span>
+      <span class="p">})</span>
+    <span class="p">[</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">incrementDislikes</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">  Comments: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">comments</span><span class="si">}</span><span class="se">\n</span><span class="s2">  Likes: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">likes</span><span class="si">}</span><span class="se">\n</span><span class="s2">  Dislikes: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">dislikes</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="n">driver_objects</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">addComment</span><span class="p">({</span>
+      <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Dontavious"</span><span class="p">,</span>
+      <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"Mid tbh"</span>
+      <span class="p">})</span>
+    <span class="p">[</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">incrementLikes</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">  Comments: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">comments</span><span class="si">}</span><span class="se">\n</span><span class="s2">  Likes: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">likes</span><span class="si">}</span><span class="se">\n</span><span class="s2">  Dislikes: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">dislikes</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    
+    <span class="n">driver_objects</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">addComment</span><span class="p">({</span>
+      <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Dontavious"</span><span class="p">,</span>
+      <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"2.7/3.0: Nice effort, poor execution."</span>
+      <span class="p">})</span>
+    <span class="p">[</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">incrementLikes</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">  Comments: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">comments</span><span class="si">}</span><span class="se">\n</span><span class="s2">  Likes: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">likes</span><span class="si">}</span><span class="se">\n</span><span class="s2">  Dislikes: </span><span class="si">{</span><span class="n">driver_objects</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">dislikes</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Test 1: find user 3
+name: "Thomas Edison", class of: 2024, id: "toby", psw: "sha256$7..."
+name: "Nicholas Tesla", class of: 2025, id: "nick", psw: "sha256$n..."
+* name: "Alexander Graham Bell", class of: 2024, id: "lex", psw: "sha256$N..."
+name: "Eli Whitney", class of: 2026, id: "eli", psw: "sha256$N..."
+name: "Hedy Lemarr", class of: 2027, id: "hedy", psw: "sha256$1..."
+
+Test 2: change user 3
+name: "Thomas Edison", class of: 2024, id: "toby", psw: "sha256$7..."
+name: "Nicholas Tesla", class of: 2025, id: "nick", psw: "sha256$n..."
+* name: "John Mortensen", class of: 2024, id: "jm1021", psw: "sha256$t..."
+name: "Eli Whitney", class of: 2026, id: "eli", psw: "sha256$N..."
+name: "Hedy Lemarr", class of: 2027, id: "hedy", psw: "sha256$1..."
+
+Test 3: generate JSON
+{"name": "Thomas Edison", "uid": "toby", "classOf": 2024, "age": 0}
+{"name": "Nicholas Tesla", "uid": "nick", "classOf": 2025, "age": 2}
+{"name": "John Mortensen", "uid": "jm1021", "classOf": 2024, "age": 2}
+{"name": "Eli Whitney", "uid": "eli", "classOf": 2026, "age": 3}
+{"name": "Hedy Lemarr", "uid": "hedy", "classOf": 2027, "age": 4}
+
+Driver objects:
+[&lt;__main__.Driver object at 0x000001B4620949A0&gt;, &lt;__main__.Driver object at 0x000001B4632BCFA0&gt;, &lt;__main__.Driver object at 0x000001B4639B2530&gt;, &lt;__main__.Driver object at 0x000001B4639B3D30&gt;]
+
+Test 4: add comments &amp; likes
+
+  Comments: [{'name': 'Dontavious', 'message': "You're trash!!"}]
+  Likes: 0
+  Dislikes: 20
+
+  Comments: [{'name': 'Dontavious', 'message': 'Mid tbh'}]
+  Likes: 20
+  Dislikes: 0
+
+  Comments: [{'name': 'Dontavious', 'message': '2.7/3.0: Nice effort, poor execution.'}]
+  Likes: 3
+  Dislikes: 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Full-output">
+<a class="anchor" href="#Full-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>Full output<a class="anchor-link" href="#Full-output"> </a>
+</h1>
+<p>Test 1: find user 3
+name: "Thomas Edison", class of: 2024, id: "toby", psw: "sha256$5..."
+name: "Nicholas Tesla", class of: 2025, id: "nick", psw: "sha256$Y..."</p>
+<ul>
+<li>name: "Alexander Graham Bell", class of: 2024, id: "lex", psw: "sha256$w..."
+name: "Eli Whitney", class of: 2026, id: "eli", psw: "sha256$c..."
+name: "Hedy Lemarr", class of: 2027, id: "hedy", psw: "sha256$m..."</li>
+</ul>
+<p>Test 2: change user 3
+name: "Thomas Edison", class of: 2024, id: "toby", psw: "sha256$5..."
+name: "Nicholas Tesla", class of: 2025, id: "nick", psw: "sha256$Y..."</p>
+<ul>
+<li>name: "John Mortensen", class of: 2024, id: "jm1021", psw: "sha256$M..."
+name: "Eli Whitney", class of: 2026, id: "eli", psw: "sha256$c..."
+name: "Hedy Lemarr", class of: 2027, id: "hedy", psw: "sha256$m..."</li>
+</ul>
+<p>Test 3: generate JSON
+{"name": "Thomas Edison", "uid": "toby", "classOf": 2024, "age": 0}
+{"name": "Nicholas Tesla", "uid": "nick", "classOf": 2025, "age": 2}
+{"name": "John Mortensen", "uid": "jm1021", "classOf": 2024, "age": 2}
+{"name": "Eli Whitney", "uid": "eli", "classOf": 2026, "age": 3}
+{"name": "Hedy Lemarr", "uid": "hedy", "classOf": 2027, "age": 4}</p>
+<p>Driver objects:
+[&lt;<strong>main</strong>.Driver object at 0x000001B4620E0AC0&gt;, &lt;<strong>main</strong>.Driver object at 0x000001B46398ECB0&gt;, &lt;<strong>main</strong>.Driver object at 0x000001B46398EBC0&gt;, &lt;<strong>main</strong>.Driver object at 0x000001B46398C2E0&gt;]</p>
+<p>Test 4: add comments &amp; likes</p>
+<p>Comments: [{'name': 'Dontavious', 'message': "You're trash!!"}]
+  Likes: 0
+  Dislikes: 20</p>
+<p>Comments: [{'name': 'Dontavious', 'message': 'Mid tbh'}]
+  Likes: 20
+  Dislikes: 0</p>
+<p>Comments: [{'name': 'Dontavious', 'message': '2.7/3.0: Nice effort, poor execution.'}]
+  Likes: 3
+  Dislikes: 0
+```</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/csp/2023/01/10/oop.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://rohinsood.github.io/csp/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>🧑‍💻Blog made with Fastpages for Mr. Mortensen&#39;s AP Computer Science Principles Class</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
