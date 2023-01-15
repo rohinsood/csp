@@ -320,17 +320,6 @@
 
   
       ,"page1": {
-          "title": "Notes",
-          "content": "Class . AP Biology | . AP Chemistry | AP CS Principles | .",
-          "url": "https://rohinsood.github.io/csp/notes/",
-          "relUrl": "/notes/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page2": {
           "title": "Vocab",
           "content": "Tri 1 . Term Definition . GitHub | 🧑‍💻 Code hosting service on the web | . Markdown | 🖋️ Markup language for formatting plain text | . Python | 🐍 High-level object-oriented scripting language | . Fastpages | ⏩ Easy to use blogging platform with Jupyter Notebook implenetation | . Repository | 📂 Where code on GitHub is stored | . Push/Pull | 🪢 Sending and recieving code to and from GitHub | . Tri 2 . Term Definition . Variables | 🏀 an element, feature, or factor that is liable to vary or change. | . Data types | 😩 type that which data is stored | . Assignment operators | 🙏 What sets a variable to a value | . Lists | 🚨 Sequences of variables stored in the same sctructure | . 2D Lists | 😎 LIsts within a list | . Dictionaries | 😁 Data structure that which stores keys and values | . Boolean Expressions | ♟️ True or false expressions | . Iterations | 🤓 Repetiion of a process | . Characters | 💌 Single characters | . Strings | 🧵 Collection of characters | . Selection | 🤏 Selectively choosing which code to run using boolean expressions | . Comparison operators | 💀 &gt;, &lt;, ==, what is used to compare two values | . For Loops | 😳 Iteration for a set number of times | . While Loops | 😶‍🌫️ Iteration as long as a condition is false | . 🧠 Terms and Definitions for APCSP .",
           "url": "https://rohinsood.github.io/csp/vocab/",
@@ -343,19 +332,8 @@
   
 
   
-      ,"page4": {
-          "title": "About Me",
-          "content": "This website is powered by fastpages [^1]. . Hey, I’m Rohin 👋 . I’m a sophmore at Del Norte High School and am interested in Full-Stack Web Developement, Robotics, and cyber security. .",
-          "url": "https://rohinsood.github.io/csp/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page5": {
-          "title": "TODO",
+      ,"page3": {
+          "title": "To Do",
           "content": "TODO LIST 😩😩😩😩😩😩 . . &lt;/ol&gt; .",
           "url": "https://rohinsood.github.io/csp/todo/",
           "relUrl": "/todo/",
@@ -365,19 +343,6 @@
   
 
   
-      ,"page6": {
-          "title": "API",
-          "content": "SMS | FORECAST | TRANSLATE | .",
-          "url": "https://rohinsood.github.io/csp/api/",
-          "relUrl": "/api/",
-          "date": ""
-      }
-      
-  
-
-  
-
-  
 
   
 
@@ -404,7 +369,7 @@
   
 
   
-      ,"page18": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://rohinsood.github.io/csp/robots.txt",
