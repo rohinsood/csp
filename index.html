@@ -9,49 +9,22 @@ image: images/logo.png
 
 <body>
 
-  <h1 id="typewriter" />
+  <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
+    <img src="images/logo.png" alt="LOGO" width="45%" style="border-width: 2px;">
+    <h1 id="typewriter" style="text-align: center;"/>
+  </div>
 
 </body>
 
-<style>
-  html {
-    background-color: black;
-    background-image: url("https://c.tenor.com/WqGAHHUPOeEAAAAC/edp445-edp445death-stare.gif");
-  }
-
-  body {
-    animation: fadeIn 0.25s ease-in;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  #container {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      margin: auto;
-      transform: rotate(45deg);
-      top: 0; bottom: 0; left: 0; right: 0;
-  }
-</style>
-
 <script>
   var i = 0;
-  var txt = "Rohin's Fastpages 😍🥺😩🥶😈😳😁🤣👎💀💀💀💀💀💀💀💀💀💀💀💀💀💀";
+  var txt = "Hi, I'm Rohin 🥶";
 
   var speed = 100;
   function typeWriter(x) {
 
     if (i <= txt.length) {
-      document.getElementById("typewriter").innerHTML = '\xa0' + txt.substring(0, i)
+      document.getElementById("typewriter").innerHTML = txt.substring(0, i)
       i++;
       setTimeout(typeWriter, speed);
     }
@@ -63,5 +36,3 @@ image: images/logo.png
 </script>
 
 </html>
-
-# My Posts
