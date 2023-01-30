@@ -8,15 +8,13 @@ title: Week 20 Trimester 2 Midterm Exam
 permalink: /posts/tri2mid
 ---
 
-# Score: 48/50 = 96%
-Proof:
 ![image](https://user-images.githubusercontent.com/68085673/215304969-65efad0e-cf3a-4452-8ab3-b58fa69068bc.png)
 
 # Question  13:
 ![image](https://user-images.githubusercontent.com/68085673/215304932-9b45200e-563d-437e-9ba0-1aa75b8645b7.png)
 
 ## Analysis:
-- The "AND" operator returns true if and only if both of its arguments evaluate to TRUE. I had gotten that option III was correct, but I claimed that option I was a correct answer, when in reality, it was option II. This is beacause if option I were to be the case, then the student would be not able to vote when they are exactly 18, as the less than or equal to sign is used. Option II is correct since a kid 16 or older can drive, but if you are not 18 or older(which is what the option says), you cannot vote, so II, along with III, which is the reverse of II, is the correct answer. This is because while a person in the desired age range can be exactly 16, they cannot be exactly 18 or they will be allowed to vote. 
+- The "AND" operator returns true only if both of its arguments are true. I initially thought option III was correct, but later realized option II was the correct answer. This is because if option I were true, it would mean that a student wouldn't be able to vote at age 18 due to the use of the less than or equal to sign. Option II is correct because it states that a person who is 16 or older can drive, but cannot vote until they are 18 or older. Therefore, option II and III, which is the opposite of II, are correct answers. This is because while a person in the desired age range can be exactly 16, they cannot be exactly 18 or they will be allowed to vote.
 
 # Question  16:
 ![image](https://user-images.githubusercontent.com/68085673/215305466-d247f4bd-78c8-495b-bd04-764cf2bbd916.png)
