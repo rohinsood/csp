@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "My plan for the CPT",
+            "title": "Create Perforamce task 2023",
             "content": "I took the CSP exam last year and submitted a quick web app displaying different chess openings. It’s still deployed at https://rohinsood.github.io/first-impressions/ and my writeup is here https://docs.google.com/document/d/1pFvSQJTjAkEjPx5eCsaU8W4tgU30PkdvHYonVqWCt6U/edit?usp=sharing I applied all CollegeBoard criteria and received a 5!! | . | . What I’ll be working on . For our dating app, Don’t Leave Me, we were pretty ambitious with our ideas, including a chat app, large user auth and interaction, and a location feature. We’ll hence be using the Svelte and Tailwind for the frontend and Firestore and Node for the backend. As the scrum master, and also as the only person who has worked with each of these tools in the past, my main goal is to teach my scrum-mates and help out however I can, whether in dev ops, frontend, or backend code. I predict the chat app will be the most advanced feature and I plan on allocating the most effort and my research there. | .",
-            "url": "https://rohinsood.github.io/csp/posts/cptprep",
-            "relUrl": "/posts/cptprep",
+            "url": "https://rohinsood.github.io/csp/2023/01/28/cptprep.html",
+            "relUrl": "/2023/01/28/cptprep.html",
             "date": " • Jan 28, 2023"
         }
         
