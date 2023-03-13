@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Extracting Information from Data, Pandas | Rohin’s Fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Extracting Information from Data, Pandas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class" />
+<meta property="og:description" content="🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class" />
+<link rel="canonical" href="https://rohinsood.github.io/csp/2023/03/08/data.html" />
+<meta property="og:url" content="https://rohinsood.github.io/csp/2023/03/08/data.html" />
+<meta property="og:site_name" content="Rohin’s Fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-08T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Extracting Information from Data, Pandas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-08T00:00:00-06:00","datePublished":"2023-03-08T00:00:00-06:00","description":"🧑‍💻Blog made with Fastpages for Mr. Mortensen’s AP Computer Science Principles Class","headline":"Extracting Information from Data, Pandas","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohinsood.github.io/csp/2023/03/08/data.html"},"url":"https://rohinsood.github.io/csp/2023/03/08/data.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohinsood.github.io/csp/feed.xml" title="Rohin's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/csp/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp/"}}">Rohin&#39;s Fastpages</a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/vocab/">Vocab</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/todo/">To Do</a><p id="time" class="page-link">Current time: </p>
+      </div>
+    </nav></div>
+</header>
+
+<script>
+  let timeElement = document.getElementById('time')
+
+  clock();
+
+  function clock() {
+    let date = new Date();
+    const date_time = date.toLocaleString().split(",");
+    console.log(date_time)
+    timeElement.innerHTML = date_time[1].replace(/\s/g, '');
+  }
+
+  setInterval(clock, 1000)
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-08-data.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">nba_api.stats.static</span> <span class="kn">import</span> <span class="n">players</span>
+<span class="kn">from</span> <span class="nn">nba_api.stats.endpoints</span> <span class="kn">import</span> <span class="n">commonplayerinfo</span><span class="p">,</span> <span class="n">playercareerstats</span>
+<span class="kn">from</span> <span class="nn">requests</span> <span class="kn">import</span> <span class="n">ReadTimeout</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+
+<span class="n">all_players</span> <span class="o">=</span> <span class="n">players</span><span class="o">.</span><span class="n">get_players</span><span class="p">()</span>
+
+<span class="n">player_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LeBron James&#39;</span><span class="p">,</span> <span class="s1">&#39;Kevin Durant&#39;</span><span class="p">,</span> <span class="s1">&#39;Stephen Curry&#39;</span><span class="p">,</span> <span class="s1">&#39;Giannis Antetokounmpo&#39;</span><span class="p">,</span> <span class="s1">&#39;Kawhi Leonard&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Luka Doncic&#39;</span><span class="p">,</span> <span class="s1">&#39;James Harden&#39;</span><span class="p">,</span> <span class="s1">&#39;Anthony Davis&#39;</span><span class="p">,</span> <span class="s1">&#39;Joel Embiid&#39;</span><span class="p">,</span> <span class="s1">&#39;Nikola Jokic&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Damian Lillard&#39;</span><span class="p">,</span> <span class="s1">&#39;Kyrie Irving&#39;</span><span class="p">,</span> <span class="s1">&#39;Russell Westbrook&#39;</span><span class="p">,</span> <span class="s1">&#39;Chris Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Bradley Beal&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Donovan Mitchell&#39;</span><span class="p">,</span> <span class="s1">&#39;Zach LaVine&#39;</span><span class="p">,</span> <span class="s1">&#39;Jayson Tatum&#39;</span><span class="p">,</span> <span class="s1">&#39;Devin Booker&#39;</span><span class="p">,</span> <span class="s1">&#39;Trae Young&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Jimmy Butler&#39;</span><span class="p">,</span> <span class="s1">&#39;Khris Middleton&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul George&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben Simmons&#39;</span><span class="p">,</span> <span class="s1">&#39;Deandre Ayton&#39;</span><span class="p">]</span>
+<span class="n">selected_players</span> <span class="o">=</span> <span class="p">[</span><span class="n">player</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">all_players</span> <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;full_name&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">player_names</span><span class="p">]</span>
+
+<span class="n">player_data</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">selected_players</span><span class="p">:</span>
+
+    <span class="n">player_id</span> <span class="o">=</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">player_info</span> <span class="o">=</span> <span class="n">commonplayerinfo</span><span class="o">.</span><span class="n">CommonPlayerInfo</span><span class="p">(</span><span class="n">player_id</span><span class="o">=</span><span class="n">player_id</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">common_player_info</span><span class="o">.</span><span class="n">get_dict</span><span class="p">()</span>
+        <span class="n">player_career_stats</span> <span class="o">=</span> <span class="n">playercareerstats</span><span class="o">.</span><span class="n">PlayerCareerStats</span><span class="p">(</span><span class="n">player_id</span><span class="o">=</span><span class="n">player_id</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">season_totals_regular_season</span><span class="o">.</span><span class="n">get_dict</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">ReadTimeout</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Request Timed Out&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="n">player_stats</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">player_info</span><span class="p">,</span> <span class="o">**</span><span class="n">player_career_stats</span><span class="p">}</span>
+    <span class="n">player_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">player_stats</span><span class="p">)</span>
+
+<span class="n">player_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">player_data</span><span class="p">)</span>
+
+<span class="n">player_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;files/players.csv&quot;</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">player_df</span><span class="p">[[</span><span class="s1">&#39;PTS&#39;</span><span class="p">,</span> <span class="s1">&#39;REB&#39;</span><span class="p">,</span> <span class="s1">&#39;AST&#39;</span><span class="p">,</span> <span class="s1">&#39;STL&#39;</span><span class="p">,</span> <span class="s1">&#39;BLK&#39;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">player_df</span><span class="p">[</span><span class="s1">&#39;ALL_STAR&#39;</span><span class="p">]</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># create a logistic regression model and fit it to the training data</span>
+<span class="n">lr_model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">lr_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">lr_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h1><blockquote><p>Early Seed award</p>
+<ul>
+<li>Add this Blog to you own Blogging site.</li>
+<li>Have all lecture files saved to your files directory before Tech Talk starts. Have data.csv open in vscode. Don't tell anyone. Show to Teacher.</li>
+</ul>
+<p>AP Prep</p>
+<ul>
+<li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
+<li>In blog add College Board practice problems for 2.3.</li>
+</ul>
+<p>The next 4 weeks, Teachers want you to improve your understanding of data.  Look at the blog and others on Unit 2.  Your intention is to find some things to differentiate your individual College Board project.</p>
+<ul>
+<li>Create or Find your own dataset.  The suggestion is to use a JSON file, integrating with your PBL project would be <strong><em>Fambulous</em></strong>.</li>
+</ul>
+</blockquote>
+
+<pre><code>When choosing a data set, think about the following:- Does it have a good sample size?    - Is there bias in the data?
+- Does the data set need to be cleaned?
+- What is the purpose of the data set?
+- ...
+</code></pre>
+<ul>
+<li>Continue this Blog using Pandas extract info from that dataset (ex. max, min, mean, median, mode, etc.)</li>
+</ul>
+<h2 id="Hack-Helpers">Hack Helpers<a class="anchor-link" href="#Hack-Helpers"> </a></h2><blockquote><p>Here is how Mort started on this assignment by asking ChatGPT  ... Regarding Python Pandas, what are some data sets that would be good for learning Pandas?</p>
+</blockquote>
+<ul>
+<li><p>There are many data sets that are suitable for learning pandas, depending on your interests and the skills you want to develop. Here are some suggestions:- Titanic Dataset: This is a classic dataset for data analysis and machine learning, and is often used as an introduction to pandas. The dataset contains information about passengers on the Titanic, including their demographics, ticket class, and survival status.</p>
+<ul>
+<li><p>Iris Dataset: This is another classic dataset that is often used in machine learning and data analysis courses. The dataset contains information about iris flowers, including their sepal length, sepal width, petal length, and petal width.</p>
+</li>
+<li><p>NBA Player Stats: This dataset contains information about NBA players, including their stats for various games, their positions, and their salaries. It is a great dataset for learning how to clean and manipulate data using pandas.</p>
+</li>
+<li><p>Housing Prices Dataset: This dataset contains information about housing prices in a particular city or region, including variables such as the number of bedrooms, square footage, and price. It is a great dataset for learning how to manipulate and analyze numerical data using pandas.</p>
+</li>
+<li><p>COVID-19 Dataset: This dataset contains information about the COVID-19 pandemic, including the number of cases, deaths, and recoveries in various countries and regions. It is a great dataset for learning how to manipulate and analyze time-series data using pandas.</p>
+</li>
+<li><p>World Bank Dataset: This dataset contains information about economic indicators from various countries, such as GDP, population, and poverty rates. It is a great dataset for learning how to manipulate and analyze large datasets using pandas.</p>
+</li>
+</ul>
+</li>
+<li><p>These are just a few examples of the many datasets that are suitable for learning pandas. The best dataset for you will depend on your interests and the specific skills you want to develop.</p>
+<blockquote><p>Follow up question, "where can I find Titanic data set?"</p>
+</blockquote>
+</li>
+<li><p>The Titanic dataset is a popular dataset for data analysis and machine learning, and it can be found on various websites and data repositories. Here are a few places where you can find the Titanic dataset:- Kaggle: The Titanic dataset is available on Kaggle, which is a popular platform for data scientists and machine learning enthusiasts. You can download the dataset from the Kaggle website after creating an account.</p>
+<ul>
+<li><p>UCI Machine Learning Repository: The Titanic dataset is also available on the UCI Machine Learning Repository, which is a collection of datasets that are commonly used for machine learning research. You can download the dataset from the UCI Machine Learning Repository website.</p>
+</li>
+<li><p>Seaborn library: If you have the Seaborn library installed in your Python environment, you can load the Titanic dataset directly from the library using the following code:</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Use Pandas to clean the data.  Most analysis, like Machine Learning or even Pandas in general like data to be in standardized format.  This is called 'Training' or 'Cleaning' data.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://rohinsood.github.io/csp/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>🧑‍💻Blog made with Fastpages for Mr. Mortensen&#39;s AP Computer Science Principles Class</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
