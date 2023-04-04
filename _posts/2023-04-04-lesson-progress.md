@@ -1,5 +1,6 @@
 ---
 title: Lesson Progress
+layout: post
 ---
 
 # 2D Array Visualization
@@ -25,7 +26,7 @@ function drawArray(data) {
   // Loop through the rows and columns of the 2D array
   for (let row = 0; row < data.length; row++) {
     for (let col = 0; col < data[row].length; col++) {
-      const value = data[row][col]+100;
+      const value = data[row][col];
       const x = col * cellWidth;
       const y = row * cellHeight;
 
@@ -56,7 +57,6 @@ drawArray(data);
   const ctx = canvas.getContext("2d");
   const dictKeys = Object.keys(dict);
   const dictValues = Object.values(dict);
-  const dictEntries = Object.entries(dict);
   const dictSize = Object.keys(dict).length;
   const dictHeight = dictSize * 50;
   let y = 50;
@@ -73,13 +73,6 @@ drawArray(data);
     y += 50;
   }
   y = dictHeight + 50;
-  ctx.fillText("Entries", 10, y - 20);
-  for (let i = 0; i < dictSize; i++) {
-    ctx.fillStyle = "lightgray";
-    ctx.fillRect(10, y, 200, 30);
-    ctx.fillStyle = "black";
-    ctx.fillText(dictEntries[i][0], 20, y + 20);
-    ctx.fillText(dictEntries[i][1], 120, y + 20);
     y += 50;
   }
 </script>
