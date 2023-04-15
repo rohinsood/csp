@@ -232,7 +232,7 @@ window.onload = wrap_img;
     <span class="bp">self</span><span class="o">.</span><span class="n">_dislikes</span> <span class="o">+=</span> <span class="mi">1</span>
 
   <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_team</span><span class="p">,</span> <span class="s2">&quot;standings&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_position</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_points</span><span class="p">,</span> <span class="s2">&quot;nationality&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nationality</span><span class="p">,</span> <span class="s2">&quot;likes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_likes</span><span class="p">,</span> <span class="s2">&quot;dislikes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dislikes</span><span class="p">,</span> <span class="s2">&quot;comments&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_comments</span><span class="p">)}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_team</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_position</span><span class="p">,</span> <span class="s2">&quot;likes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_likes</span><span class="p">,</span> <span class="s2">&quot;dislikes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dislikes</span><span class="p">,</span> <span class="s2">&quot;comments&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_comments</span><span class="p">)}</span>
 </pre></div>
 
     </div>
@@ -315,6 +315,7 @@ window.onload = wrap_img;
   <span class="p">[</span><span class="n">player_objects</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">like</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
 
   <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">player_objects</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
     <span class="k">try</span><span class="p">:</span>
       <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
       <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -329,10 +330,28 @@ window.onload = wrap_img;
         <span class="n">init_players</span><span class="p">()</span>
 
 <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">()</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
+<span class="n">db</span><span class="o">.</span><span class="n">drop_all</span><span class="p">()</span>
 <span class="n">init_db</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;name&#39;: &#39;Ike Anigbogu&#39;, &#39;team&#39;: &#39;Indiana Pacers&#39;, &#39;position&#39;: &#39;C&#39;, &#39;likes&#39;: 0, &#39;dislikes&#39;: 20, &#39;comments&#39;: &#39;[{\&#39;name\&#39;: \&#39;Dontavious\&#39;, \&#39;message\&#39;: &#34;You\&#39;re trash!!&#34;}]&#39;}
+{&#39;name&#39;: &#39;Ron Baker&#39;, &#39;team&#39;: &#39;New York Knicks&#39;, &#39;position&#39;: &#39;G&#39;, &#39;likes&#39;: 20, &#39;dislikes&#39;: 0, &#39;comments&#39;: &#34;[{&#39;name&#39;: &#39;Dontavious&#39;, &#39;message&#39;: &#39;Mid tbh&#39;}]&#34;}
+{&#39;name&#39;: &#39;Jabari Bird&#39;, &#39;team&#39;: &#39;Boston Celtics&#39;, &#39;position&#39;: &#39;G&#39;, &#39;likes&#39;: 3, &#39;dislikes&#39;: 0, &#39;comments&#39;: &#34;[{&#39;name&#39;: &#39;Dontavious&#39;, &#39;message&#39;: &#39;3.0/3.0: Great job! You deserve some seed points.&#39;}]&#34;}
+{&#39;name&#39;: &#39;MarShon Brooks&#39;, &#39;team&#39;: &#39;Memphis Grizzlies&#39;, &#39;position&#39;: &#39;G&#39;, &#39;likes&#39;: 0, &#39;dislikes&#39;: 0, &#39;comments&#39;: &#39;[]&#39;}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -341,21 +360,98 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h1><ul>
-<li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
-<li>Change blog to your own database.</li>
-<li>Add additional CRUD<ul>
-<li>Add Update functionality to this blog.</li>
-<li>Add Delete functionality to this blog.</li>
+<h1 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h1><ul>
+<li>Comment on where you have observed these working? Provide a defintion of purpose.<ul>
+<li>Flask app object<ul>
+<li>instantiates an object of the Flask class</li>
+</ul>
+</li>
+<li>SQLAlchemy db object<ul>
+<li>instantiates an object of the SQLAlchemy class</li>
 </ul>
 </li>
 </ul>
+</li>
+<li>Comment on these items in the class, purpose and defintion.<ul>
+<li>class Player<ul>
+<li>Defines attributes and methods of the Player object</li>
+</ul>
+</li>
+<li>db.Model inheritance<ul>
+<li>Inherits attributes of an SQLlite3 table model</li>
+</ul>
+</li>
+<li>init method<ul>
+<li>Called on object declaration, declares initialized values</li>
+</ul>
+</li>
+<li>@property, @<column>.setter<ul>
+<li>Decorators for creating getters and setters &amp; encapsulating objects</li>
+</ul>
+&lt;/li&gt;
+<li>create, read, update, delete methods<ul>
+<li>Methods that directly interact with the attributes and are committed to the database</li>
+</ul>
+</li>
+<li>Comment on how these work?</li>
+<li>Create All Tables from db Object<ul>
+<li>Creates call tables according to what is defined earlier</li>
+</ul>
+</li>
+<li>User Object Constructors<ul>
+<li>Sets attributes of the method</li>
+</ul>
+</li>
+<li>Try / Except<ul>
+<li>Catches any errors in the event that the use could not be created </li>
+</ul>
+</li>
+&lt;/ul&gt;
+&lt;/li&gt;
+<li>Comment on purpose of following<ul>
+<li>Player.query.filter_by<ul>
+<li>iterates through player query </li>
+</ul>
+</li>
+<li>player.name<ul>
+<li>accesses the password attribute</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Comment on purpose of following<ul>
+<li>user.find_by_uid() and try/except</li>
+<li>user = User(...)<ul>
+<li>instantiates the User object</li>
+</ul>
+</li>
+<li>user.dob and try/except</li>
+<li>user.create() and try/except<ul>
+<li>try and except prevents the process from terminating in the middle of a for loop</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Comment on purpose of following<ul>
+<li>User.query.all<ul>
+<li>Querys all rows of users</li>
+</ul>
+</li>
+<li>json_ready assignment, google List Comprehension<ul>
+<li>list comprehension is used for iterative assigment operation without the use of a large and difficult ot read for loop</li>
+</ul>
+</li>
+</ul>
+</li>
+&lt;/ul&gt;
 
-</div>
-</div>
-</div>
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
 
+</column></li></ul></li></ul></div></div></div></div>
 
 
       </div>
