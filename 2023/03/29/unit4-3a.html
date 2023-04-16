@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 4.3A | Rohin’s Fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 4.3A" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Parallel Computing" />
+<meta property="og:description" content="Parallel Computing" />
+<link rel="canonical" href="https://rohinsood.github.io/csp/2023/03/29/unit4-3a.html" />
+<meta property="og:url" content="https://rohinsood.github.io/csp/2023/03/29/unit4-3a.html" />
+<meta property="og:site_name" content="Rohin’s Fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-29T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit 4.3A" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-29T00:00:00-05:00","datePublished":"2023-03-29T00:00:00-05:00","description":"Parallel Computing","headline":"Unit 4.3A","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohinsood.github.io/csp/2023/03/29/unit4-3a.html"},"url":"https://rohinsood.github.io/csp/2023/03/29/unit4-3a.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csp/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohinsood.github.io/csp/feed.xml" title="Rohin's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/csp/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csp/"}}">Rohin&#39;s Fastpages</a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/vocab/">Vocab</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/todo/">To Do</a><p id="time" class="page-link">Current time: </p>
+      </div>
+    </nav></div>
+</header>
+
+<script>
+  let timeElement = document.getElementById('time')
+
+  clock();
+
+  function clock() {
+    let date = new Date();
+    const date_time = date.toLocaleString().split(",");
+    console.log(date_time)
+    timeElement.innerHTML = date_time[1].replace(/\s/g, '');
+  }
+
+  setInterval(clock, 1000)
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-29-unit4-3a.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Analyzing-Parallel-Computing">Analyzing Parallel Computing<a class="anchor-link" href="#Analyzing-Parallel-Computing"> </a></h2><blockquote><p>Once again we will use image lab, this time to review Parallel Computing.</p>
+<ul>
+<li>Change baseWidth in this line in code to increase computation requirements:<code>def process_image(image, baseWidth=512):</code>  For instance 320, 512, 1024, 2048, 4096.- Compare Sequential and Parallel computing code and time to achieve outputs</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>  <span class="c1"># https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">pilImage</span> <span class="c1"># as PIL Image is used to avoid conflicts</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="c1"># prepares a series of images</span>
+<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;images/&quot;</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
+    <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># default image</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Internet&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Green Square&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;green-square-16.png&quot;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Peter Carolin&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Clouds Impression&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;clouds-impression.png&quot;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Peter Carolin&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Lassen Volcano&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;lassen-volcano.jpg&quot;</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+        <span class="c1"># File to open</span>
+        <span class="n">image</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span>  <span class="c1"># file with path</span>
+    <span class="k">return</span> <span class="n">images</span>
+
+<span class="c1"># Scale to baseWidth</span>
+<span class="k">def</span> <span class="nf">scale_image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">baseWidth</span><span class="p">):</span>
+    <span class="n">scalePercent</span> <span class="o">=</span> <span class="p">(</span><span class="n">baseWidth</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">scaleHeight</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">scalePercent</span><span class="p">)))</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="p">(</span><span class="n">baseWidth</span><span class="p">,</span> <span class="n">scaleHeight</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+
+<span class="c1"># PIL image converted to base64</span>
+<span class="k">def</span> <span class="nf">image_to_base64</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="nb">format</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">BytesIO</span><span class="p">()</span> <span class="k">as</span> <span class="n">buffer</span><span class="p">:</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    
+<span class="c1"># Convert pixels to Grey Scale</span>
+<span class="k">def</span> <span class="nf">grey_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">):</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># average pixel values and use // for integer division</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># PNG format</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">)</span> <span class="p">)</span>
+    
+<span class="c1"># Convert pixels to Red Scale</span>
+<span class="k">def</span> <span class="nf">red_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># PNG format</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+    
+<span class="c1"># Convert pixels to Red Scale</span>
+<span class="k">def</span> <span class="nf">green_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># PNG format</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+    
+<span class="c1"># Convert pixels to Red Scale</span>
+<span class="k">def</span> <span class="nf">blue_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># PNG format</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="p">)</span>
+        
+<span class="c1"># Set Properties of Image, Scale, and convert to Base64</span>
+<span class="k">def</span> <span class="nf">image_management</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">baseWidth</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted        </span>
+    <span class="c1"># Image open return PIL image object</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">pilImage</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># Python Image Library operations</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">format</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">mode</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+    <span class="c1"># Scale the Image</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">scale_image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">baseWidth</span><span class="p">)</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;pil&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;scaled_size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;numpy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getdata</span><span class="p">())</span>
+    <span class="c1"># Scaled HTML</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;pil&#39;</span><span class="p">],</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># Grey HTML</span>
+    <span class="c1"># each pixel in numpy array is turned to grey </span>
+    <span class="c1"># then resulting list, using List Comprehension, is put back into img    </span>
+    <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">([</span><span class="n">grey_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;numpy&#39;</span><span class="p">]])</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_grey&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># Red HTML</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">([</span><span class="n">red_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;numpy&#39;</span><span class="p">]])</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_red&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># Green HTML</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">([</span><span class="n">green_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;numpy&#39;</span><span class="p">]])</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_green&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># Blue HTML</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">([</span><span class="n">blue_pixel</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;numpy&#39;</span><span class="p">]])</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_blue&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
+    
+    
+<span class="k">def</span> <span class="nf">process_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">baseWidth</span><span class="o">=</span><span class="mi">320</span><span class="p">):</span>
+    <span class="n">image_management</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">baseWidth</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---- meta data -----&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original size: &quot;</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scaled size: &quot;</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;scaled_size&#39;</span><span class="p">])</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- images --&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">]))</span> 
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_grey&#39;</span><span class="p">]))</span> 
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_red&#39;</span><span class="p">]))</span> 
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_green&#39;</span><span class="p">]))</span> 
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_blue&#39;</span><span class="p">]))</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sequential-Processing">Sequential Processing<a class="anchor-link" href="#Sequential-Processing"> </a></h2><blockquote><p>The for loop iterates over the list of images and processes them one at a time, in order.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># setup default images</span>
+    <span class="n">images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
+
+    <span class="c1"># Sequential Processing    </span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+        <span class="n">process_image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Parallel-Computing">Parallel Computing<a class="anchor-link" href="#Parallel-Computing"> </a></h2><blockquote><p>In parallel or concurrent mode, the ThreadPoolExecutor is used to submit each image to a separate worker thread, allowing multiple images to be processed simultaneously. Multithreading allows multiple concurrent tasks of a process at the same time. The executor.map() method is used to apply the process_image function to each image in the images list.</p>
+<ul>
+<li>The order in which the images are processed is not guaranteed, as threads are performed simultaneously.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">concurrent.futures</span>
+
+<span class="c1"># Jupyter Notebook Visualization of Images</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># setup default images</span>
+    <span class="n">images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
+    
+    <span class="c1"># Parallel Processsing</span>
+    <span class="c1"># executor allocates threads, it considers core execution capability of machine</span>
+    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">()</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">process_image</span><span class="p">,</span> <span class="n">images</span><span class="p">)</span>  <span class="c1"># order is not predictable</span>
+        
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Observing-Parallel-Computing-and-Threads">Observing Parallel Computing and Threads<a class="anchor-link" href="#Observing-Parallel-Computing-and-Threads"> </a></h2><blockquote><p>You can observe Processes, CPU Percentage, and Threads with Tools on your machine. Common tools to monitor performance are Activity Monitor on MacOS or Task Manager on Windows.</p>
+</blockquote>
+<ul>
+<li>This example is using <code>top</code> launched in VSCode Terminal. (mac)</li>
+<li>Try <code>top -H</code> for linux.<ul>
+<li>PID is Process ID.  </li>
+<li>COMMAND is task running on machine.  Python is activated when running this Jupyter notebook.</li>
+<li>#TH is number of threads.   This increases from 15/1 to 18/1 on my machine when running python parallel computing example.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h2><blockquote><p>AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3.  They start at about the 9 minute mark.</p>
+</blockquote>
+<ul>
+<li><p>Example 1
+The minimum amount of time to execute all 3 processes is equal to the longest time it takes to execute a single process given that they all spawn at the same time and run in parallel.</p>
+</li>
+<li><p>Example 2</p>
+</li>
+</ul>
+
+<pre><code>Parallel processor:max(25, 45) = 45 secSequential processor: 25 + 45 = 70 sec
+Difference: 70 - 45 = 25 sec</code></pre>
+<p>See above; parallel processing time is equal to maximum individual time. Sequential time assumes that all tasks run one after another without delay.</p>
+<blockquote><p>Data Structures.  Build a List Comprehension example</p>
+<ul>
+<li>list = [calc(item) for item in items]</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pig_latin</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;ay&quot;</span>
+    <span class="k">return</span> <span class="n">word</span>
+
+<span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;! Nice to meet you.&quot;</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+<span class="c1"># calls `pig_latin` on every word in the sentence</span>
+<span class="n">latin</span> <span class="o">=</span> <span class="p">[</span><span class="n">pig_latin</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
+
+<span class="n">latin_sentence</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">latin</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">latin_sentence</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>elloHay Safin! iceNay otay eetmay you.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csp/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://rohinsood.github.io/csp/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csp/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>🧑‍💻Blog made with Fastpages for Mr. Mortensen&#39;s AP Computer Science Principles Class</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
