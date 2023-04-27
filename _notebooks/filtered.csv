@@ -1,0 +1,3 @@
+,Crop,Area harvested (km2),Gross Production (m tonnes),Yield per km2 (tonnes),Gross Production value ($bn),Value per km2,SourceName,Source,Wikipedia Page,Image,Main Producer (Quantity),"Main Producer ($), if different","Metric Tonnes Produced (by Main Producer, Quantity)",Status
+14,Sugar Beet,"49,008",270.0,"5,509",13,"265,263",FAOSTAT,http://faostat3.fao.org/,http://en.wikipedia.org/wiki/Sugar_beet,http://upload.wikimedia.org/wikipedia/commons/5/58/Sugar_beet_field_(4799481326).jpg,Russia,,45057000,Legal Crop
+15,Sugar Cane,"260,886",1833.0,"7,026",68,"260,650",FAOSTAT,http://faostat3.fao.org/,http://en.wikipedia.org/wiki/Sugarcane,http://upload.wikimedia.org/wikipedia/commons/2/29/Cut_sugarcane.jpg,Brazil,,721077287,Legal Crop
